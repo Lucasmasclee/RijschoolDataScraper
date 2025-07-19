@@ -15,6 +15,7 @@ fastest_auto_selector = None
 found_schoolnames = set()
 found_emails = set()
 found_websites = set()
+found_phone_numbers = set()
 entries = set()
 
 def load_dutch_places():
@@ -716,16 +717,18 @@ def extract_phone_number(driver):
                             phone_number = phone_href[4:]  # Remove 'tel:' prefix
                             if phone_number and len(phone_number) > 5:
                                 # Basic validation - should contain digits
-                                if any(char.isdigit() for char in phone_number):
+                                if any(char.isdigit() for char in phone_number) and phone_number not in found_phone_numbers:
                                     print(selector)
+                                    found_phone_numbers.add(phone_number.replace(',', ''))
                                     return phone_number
                         elif phone_text and len(phone_text) > 5:
                             # Check if it looks like a phone number
-                            if any(char.isdigit() for char in phone_text):
+                            if any(char.isdigit() for char in phone_text) and phone_text not in found_phone_numbers:
                                 # Remove common prefixes and clean up
                                 cleaned_text = phone_text.replace('+31', '').replace('0031', '').replace(' ', '').replace('-', '').replace('(', '').replace(')', '')
                                 if len(cleaned_text) >= 8 and cleaned_text.isdigit():
                                     print(selector)
+                                    found_phone_numbers.add(phone_text.replace(',', ''))
                                     return phone_text  # Return original text for display
                     except Exception as element_error:
                         continue
@@ -845,97 +848,6 @@ def extract_website(driver):
         print(f"        ✗ Fout bij extractie van website: {str(e)}")
         return None
 
-def extract_driving_schools(driver, place_name):
-    """Extract driving school information from the current page."""
-    try:
-        # Wait a bit more for results to load
-        time.sleep(0.01)
-        
-        # Look for driving school results on the CBR website
-        # The results might appear in different formats
-        wait = WebDriverWait(driver, 10)
-        
-        # Try multiple selectors to find driving school listings
-        selectors = [
-            '.driving-school',
-            '.rijschool', 
-            '[class*="school"]',
-            '[class*="result"]',
-            '.result-item',
-            '.school-item',
-            'article',
-            '.content-item'
-        ]
-        
-        driving_schools = []
-        for selector in selectors:
-            try:
-                schools = driver.find_elements(By.CSS_SELECTOR, selector)
-                if schools:
-                    driving_schools = schools
-                    # print(f"Found {len(driving_schools)} potential driving schools using selector '{selector}' for {place_name}")
-                    break
-            except:
-                continue
-        
-        if driving_schools:
-            print(f"Processing {len(driving_schools)} driving schools for {place_name}")
-            
-            for i, school in enumerate(driving_schools[:]):  # Limit to first 10
-                try:
-                    # Try to extract school name using multiple approaches
-                    name_selectors = ['h1', 'h2', 'h3', '.name', '.title', '[class*="name"]', '[class*="title"]']
-                    school_name = "Unknown"
-                    
-                    for name_selector in name_selectors:
-                        try:
-                            name_element = school.find_element(By.CSS_SELECTOR, name_selector)
-                            if name_element.text.strip():
-                                school_name = name_element.text.strip()
-                                break
-                        except:
-                            continue
-                    
-                    print(f"  {i+1}. {school_name}")
-                    
-                    # Try to extract contact information
-                    contact_selectors = [
-                        'a[href*="mailto"]',
-                        '.email', 
-                        '[class*="email"]',
-                        'a[href*="tel:"]',
-                        '.phone',
-                        '[class*="phone"]'
-                    ]
-                    
-                    for contact_selector in contact_selectors:
-                        try:
-                            contact_elements = school.find_elements(By.CSS_SELECTOR, contact_selector)
-                            for contact in contact_elements:
-                                contact_text = contact.text.strip()
-                                contact_href = contact.get_attribute('href') or ''
-                                
-                                if '@' in contact_text or 'mailto:' in contact_href or contact_text.replace(' ', '').isdigit():
-                                    print(f"     Contact: {contact_text}")
-                        except:
-                            continue
-                    
-                except Exception as e:
-                    print(f"    Error extracting school {i+1}: {str(e)}")
-        else:
-            print(f"No driving schools found for {place_name}")
-            
-            # Let's also check if there's a "no results" message
-            try:
-                no_results = driver.find_elements(By.XPATH, "//*[contains(text(), 'geen resultaten') or contains(text(), 'no results') or contains(text(), 'niet gevonden')]")
-                if no_results:
-                    print(f"  No results message found for {place_name}")
-            except:
-                pass
-            
-    except Exception as e:
-        print(f"Error extracting driving schools for {place_name}: {str(e)}")
-
 
 if __name__ == "__main__":
     with open('leads_no_email.csv', 'r') as file:
@@ -965,7 +877,7 @@ if __name__ == "__main__":
     driver = webdriver.Edge(options=edge_options)
     
     # Process each place (you can limit the number by changing the range)
-    for i, place in enumerate(places[0:]):  # Process first 50 places as an example
+    for i, place in enumerate(places[3:]):  # Process first 50 places as an example
         print(f"\n--- Processing place {i+1}/{len(places)}: {place} ---")
         process_place(driver, place)
         driver.quit()
