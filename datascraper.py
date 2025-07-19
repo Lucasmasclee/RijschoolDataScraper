@@ -14,6 +14,7 @@ import csv
 fastest_auto_selector = None
 found_schoolnames = set()
 found_emails = set()
+found_websites = set()
 entries = set()
 
 def load_dutch_places():
@@ -429,6 +430,11 @@ def click_all_search_results(driver, place_name):
                     # Wait a bit for the result to load/expand
                     time.sleep(0.01)
                     
+                    # Extract data from this specific result
+                    entry = extract_driving_school_data_from_result(driver, place_name, i+1)
+
+                    # Wait a bit before next result
+
                     # Click the element again so that this result is deselected
                     clickable_element.click()
                     time.sleep(0.01)
@@ -451,6 +457,58 @@ def click_all_search_results(driver, place_name):
     except Exception as e:
         print(f"  ✗ Error processing search results for {place_name}: {str(e)}")
 
+
+def extract_driving_school_data_from_result(driver, place_name, result_number) -> str:
+    entry = ""
+    """Extract driving school information from a specific clicked result."""
+    print(f"      📊 Extracting data from result {result_number} for {place_name}")
+    
+    try:        
+        time.sleep(0.01)
+        try:
+            school_name = extract_school_name(driver)
+            print(f"Rijschool naam: {school_name}")
+        except Exception as e:
+            school_name = None
+        
+        try:
+            email_address = extract_email_address(driver)
+            print(f"Email: {email_address}")
+        except Exception as e:
+            email_address = None
+        
+        try:
+            phone_number = extract_phone_number(driver)
+            print(f"Telefoon: {phone_number}")
+        except Exception as e:
+            phone_number = None
+        
+        try:
+            website = extract_website(driver)
+            print(f"Website: {website}")
+        except Exception as e:
+            website = None
+        
+        entry = f"{school_name},{phone_number},{email_address},{website}"
+        if(entry not in entries):
+            print(f"Entry: {entry}")
+            # add row to rijscholen_leads.csv
+            if(email_address is None):
+                with open('leads_no_email.csv', 'a', newline='', encoding='utf-8') as csvfile:
+                    writer = csv.writer(csvfile)
+                    writer.writerow([entry])
+            else:
+                with open('rijscholen_leads.csv', 'a', newline='', encoding='utf-8') as csvfile:
+                    writer = csv.writer(csvfile)
+                    writer.writerow([entry])
+        else:
+            print(f"Entry already exists: {entry}")
+        return entry
+            
+    except Exception as e:
+        print(f"        ✗ Fout bij extractie van data uit result {result_number}: {str(e)}")
+        print(f"        🔍 Stack trace: {e.__class__.__name__}")
+        return True  # Continue to next result even if there was an error
 
 
 def extract_school_name(driver):
@@ -633,7 +691,7 @@ def extract_phone_number(driver):
             # '.telefoon',
             # '[class*="phone"]',
             # '[class*="tel"]',
-            # # More general selectors
+            # More general selectors
             # 'a[href*="tel"]',
             # '[class*="contact"]',
             # 'span',
@@ -742,13 +800,17 @@ def extract_website(driver):
                             # Basic validation - should be a website URL
                             if len(website_href) > 10 and '.' in website_href:
                                 # Filter out common non-website URLs
-                                if not any(exclude in website_href.lower() for exclude in ['mailto:', 'tel:', 'javascript:', '#']):
+                                if not any(exclude in website_href.lower() for exclude in ['cbr.nl','mailto:', 'tel:', 'javascript:', '#']) and website_href not in found_websites:
+                                    print(selector)
+                                    found_websites.add(website_href.replace(',', ''))
                                     return website_href
                         elif website_text and ('http://' in website_text or 'https://' in website_text or 'www.' in website_text):
                             # Check if text looks like a website URL
                             if len(website_text) > 10 and '.' in website_text:
                                 # Filter out common non-website URLs
-                                if not any(exclude in website_text.lower() for exclude in ['mailto:', 'tel:', 'javascript:', '#']):
+                                if not any(exclude in website_text.lower() for exclude in ['cbr.nl','mailto:', 'tel:', 'javascript:', '#']) and website_text not in found_websites:
+                                    print(selector)
+                                    found_websites.add(website_text.replace(',', ''))
                                     return website_text
                     except Exception as element_error:
                         continue
@@ -784,6 +846,97 @@ def extract_website(driver):
     except Exception as e:
         print(f"        ✗ Fout bij extractie van website: {str(e)}")
         return None
+
+def extract_driving_schools(driver, place_name):
+    """Extract driving school information from the current page."""
+    try:
+        # Wait a bit more for results to load
+        time.sleep(0.01)
+        
+        # Look for driving school results on the CBR website
+        # The results might appear in different formats
+        wait = WebDriverWait(driver, 10)
+        
+        # Try multiple selectors to find driving school listings
+        selectors = [
+            '.driving-school',
+            '.rijschool', 
+            '[class*="school"]',
+            '[class*="result"]',
+            '.result-item',
+            '.school-item',
+            'article',
+            '.content-item'
+        ]
+        
+        driving_schools = []
+        for selector in selectors:
+            try:
+                schools = driver.find_elements(By.CSS_SELECTOR, selector)
+                if schools:
+                    driving_schools = schools
+                    # print(f"Found {len(driving_schools)} potential driving schools using selector '{selector}' for {place_name}")
+                    break
+            except:
+                continue
+        
+        if driving_schools:
+            print(f"Processing {len(driving_schools)} driving schools for {place_name}")
+            
+            for i, school in enumerate(driving_schools[:]):  # Limit to first 10
+                try:
+                    # Try to extract school name using multiple approaches
+                    name_selectors = ['h1', 'h2', 'h3', '.name', '.title', '[class*="name"]', '[class*="title"]']
+                    school_name = "Unknown"
+                    
+                    for name_selector in name_selectors:
+                        try:
+                            name_element = school.find_element(By.CSS_SELECTOR, name_selector)
+                            if name_element.text.strip():
+                                school_name = name_element.text.strip()
+                                break
+                        except:
+                            continue
+                    
+                    print(f"  {i+1}. {school_name}")
+                    
+                    # Try to extract contact information
+                    contact_selectors = [
+                        'a[href*="mailto"]',
+                        '.email', 
+                        '[class*="email"]',
+                        'a[href*="tel:"]',
+                        '.phone',
+                        '[class*="phone"]'
+                    ]
+                    
+                    for contact_selector in contact_selectors:
+                        try:
+                            contact_elements = school.find_elements(By.CSS_SELECTOR, contact_selector)
+                            for contact in contact_elements:
+                                contact_text = contact.text.strip()
+                                contact_href = contact.get_attribute('href') or ''
+                                
+                                if '@' in contact_text or 'mailto:' in contact_href or contact_text.replace(' ', '').isdigit():
+                                    print(f"     Contact: {contact_text}")
+                        except:
+                            continue
+                    
+                except Exception as e:
+                    print(f"    Error extracting school {i+1}: {str(e)}")
+        else:
+            print(f"No driving schools found for {place_name}")
+            
+            # Let's also check if there's a "no results" message
+            try:
+                no_results = driver.find_elements(By.XPATH, "//*[contains(text(), 'geen resultaten') or contains(text(), 'no results') or contains(text(), 'niet gevonden')]")
+                if no_results:
+                    print(f"  No results message found for {place_name}")
+            except:
+                pass
+            
+    except Exception as e:
+        print(f"Error extracting driving schools for {place_name}: {str(e)}")
 
 
 if __name__ == "__main__":
