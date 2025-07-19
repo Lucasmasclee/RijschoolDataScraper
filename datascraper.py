@@ -934,16 +934,15 @@ def extract_driving_schools(driver, place_name):
 if __name__ == "__main__":
     with open('leads_no_email.csv', 'r') as file:
         reader = csv.reader(file)
+        next(reader) # Skip header row
         for row in reader:
-            entry = row[0] + ',' + row[1] + ',' + row[2] + ',' + row[3]
-            entries.add(entry)
-            break
-    with open('leads_no_email.csv', 'r') as file:
+            entries.add(row[0])
+
+    with open('rijscholen_leads.csv', 'r') as file:
         reader = csv.reader(file)
+        next(reader) # Skip header row
         for row in reader:
-            entry = row[0] + ',' + row[1] + ',' + row[2] + ',' + row[3]
-            entries.add(entry)
-            break
+            entries.add(row[0])
     print(entries)
 
     # Load Dutch place names
