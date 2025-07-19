@@ -546,7 +546,7 @@ def extract_school_name(driver):
                 elements = driver.find_elements(By.CSS_SELECTOR, selector)
                 for element in elements:
                     try:
-                        name_text = element.text.strip()
+                        name_text = element.text.strip().replace(',', '')
                         # Filter out unwanted text
                         if (name_text and 
                             name_text != "Rijschoolzoeker" and 
@@ -562,7 +562,7 @@ def extract_school_name(driver):
                             not name_text.startswith("Niet") and
                             not name_text.lower().startswith("klik") and
                             not name_text.lower().startswith("selecteer") and
-                            not name_text.lower() in found_schoolnames):
+                            not name_text.lower().replace(',', '') in found_schoolnames):
                             found_schoolnames.add(name_text.lower().replace(',', ''))
                             return name_text
                     except Exception as element_error:
