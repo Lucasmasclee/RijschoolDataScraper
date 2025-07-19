@@ -363,7 +363,7 @@ def click_all_search_results(driver, place_name):
             print(f"  ✓ Found {len(all_results)} search results, clicking each one...")
             
             # Click on each result one by one (limit to first 10 for testing)
-            max_results = min(10000, len(all_results))  # Limit to first 10 results for now
+            max_results = min(1000, len(all_results))  # Limit to first 10 results for now
             # print(f"    ⚠️ Limiting to first {max_results} results for testing")
             
             for i, result in enumerate(all_results[:max_results]):
@@ -962,3 +962,5 @@ if __name__ == "__main__":
     for i, place in enumerate(places[1:]):  # Process first 50 places as an example
         print(f"\n--- Processing place {i+1}/{len(places)}: {place} ---")
         process_place(driver, place)
+        driver.quit()
+        driver = webdriver.Edge(options=edge_options)
