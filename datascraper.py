@@ -959,7 +959,7 @@ if __name__ == "__main__":
     driver = webdriver.Edge(options=edge_options)
     
     # Process each place (you can limit the number by changing the range)
-    for i, place in enumerate(places[1:]):  # Process first 50 places as an example
+    for i, place in enumerate(places[0:]):  # Process first 50 places as an example
         print(f"\n--- Processing place {i+1}/{len(places)}: {place} ---")
         process_place(driver, place)
         driver.quit()
