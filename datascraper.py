@@ -800,17 +800,15 @@ def extract_website(driver):
                             # Basic validation - should be a website URL
                             if len(website_href) > 10 and '.' in website_href:
                                 # Filter out common non-website URLs
-                                if not any(exclude in website_href.lower() for exclude in ['cbr.nl','mailto:', 'tel:', 'javascript:', '#']) and website_href not in found_websites:
+                                if not any(exclude in website_href.lower() for exclude in ['mailto:', 'tel:', 'javascript:', '#']):
                                     print(selector)
-                                    found_websites.add(website_href.replace(',', ''))
                                     return website_href
                         elif website_text and ('http://' in website_text or 'https://' in website_text or 'www.' in website_text):
                             # Check if text looks like a website URL
                             if len(website_text) > 10 and '.' in website_text:
                                 # Filter out common non-website URLs
-                                if not any(exclude in website_text.lower() for exclude in ['cbr.nl','mailto:', 'tel:', 'javascript:', '#']) and website_text not in found_websites:
+                                if not any(exclude in website_text.lower() for exclude in ['mailto:', 'tel:', 'javascript:', '#']):
                                     print(selector)
-                                    found_websites.add(website_text.replace(',', ''))
                                     return website_text
                     except Exception as element_error:
                         continue
