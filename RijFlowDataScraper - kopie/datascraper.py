@@ -1,6 +1,9 @@
 from selenium import webdriver
 from selenium.webdriver.edge.service import Service
 from selenium.webdriver.edge.options import Options
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.microsoft import EdgeChromiumDriverManager
 import time
 import os
@@ -98,6 +101,71 @@ def open_edge_browser():
         print("4. Zorg ervoor dat Microsoft Edge geïnstalleerd is")
         return None
 
+def accept_cookies(driver):
+    """
+    Accepteert automatisch alle cookies door op de "Alles accepteren" knop te klikken
+    """
+    try:
+        print("🍪 Zoeken naar cookie acceptatie knop...")
+        
+        # Wacht tot de cookie banner verschijnt (maximaal 10 seconden)
+        wait = WebDriverWait(driver, 10)
+        
+        # Probeer verschillende selectors voor de "Alles accepteren" knop
+        cookie_selectors = [
+            "button[id='L2AGLb']",  # Google's standaard cookie acceptatie knop
+            "button:contains('Alles accepteren')",  # Nederlandse tekst
+            "button:contains('Accept all')",  # Engelse tekst
+            "button[aria-label*='Accept']",  # Aria-label met accept
+            "button[data-ved*='accept']",  # Data-ved attribuut
+            ".QS5gu.sy4vM",  # Class combinatie uit de HTML
+            "button.tHlp8d"  # Class van de button
+        ]
+        
+        cookie_button = None
+        
+        for selector in cookie_selectors:
+            try:
+                if selector.startswith("button:contains"):
+                    # Voor contains selectors, zoek naar tekst
+                    text = selector.split("'")[1]
+                    cookie_button = wait.until(
+                        EC.element_to_be_clickable((By.XPATH, f"//button[contains(text(), '{text}')]"))
+                    )
+                else:
+                    cookie_button = wait.until(
+                        EC.element_to_be_clickable((By.CSS_SELECTOR, selector))
+                    )
+                
+                if cookie_button:
+                    print(f"✅ Cookie knop gevonden met selector: {selector}")
+                    break
+                    
+            except Exception:
+                continue
+        
+        if cookie_button:
+            # Scroll naar de knop om ervoor te zorgen dat deze zichtbaar is
+            driver.execute_script("arguments[0].scrollIntoView(true);", cookie_button)
+            time.sleep(1)
+            
+            # Klik op de knop
+            cookie_button.click()
+            print("✅ Cookies succesvol geaccepteerd!")
+            
+            # Wacht even zodat de cookie banner verdwijnt
+            time.sleep(2)
+            return True
+            
+        else:
+            print("⚠️ Geen cookie acceptatie knop gevonden - mogelijk zijn cookies al geaccepteerd")
+            return False
+            
+    except Exception as e:
+        print(f"⚠️ Fout bij het accepteren van cookies: {e}")
+        print("💡 Mogelijk zijn cookies al geaccepteerd of is er geen cookie banner")
+        return False
+
 def close_browser(driver):
     """
     Sluit de browser
@@ -122,6 +190,9 @@ def main():
             print("🌐 Test: ga naar Google...")
             driver.get("https://www.google.com")
             
+            # Probeer automatisch cookies te accepteren
+            accept_cookies(driver)
+            
             # Wacht even zodat je kunt zien wat er gebeurt
             print("⏳ Wacht 5 seconden zodat je kunt zien wat er gebeurt...")
             time.sleep(5)
@@ -141,3 +212,4 @@ def main():
 if __name__ == "__main__":
     print("start")
     main()
+    print("end")
