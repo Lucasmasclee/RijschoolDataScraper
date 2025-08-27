@@ -237,6 +237,8 @@ def extract_contact_info(driver, rijschool_naam):
                         if 'details__contact__phone' in classes or 'tel:' in href:
                             # Verwijder 'tel:' prefix en voeg toe aan lijst
                             phone = href.replace('tel:', '') if 'tel:' in href else text
+                            # Telefoonnummer kan alleen nummers en spaties bevatten
+                            phone = re.sub(r'[^0-9\s]', '', phone)
                             if phone not in contact_info['telefoonnummers']:
                                 contact_info['telefoonnummers'].append(phone)
                                 print(f"    ✅ Telefoonnummer toegevoegd: {phone}")
@@ -270,7 +272,18 @@ def extract_contact_info(driver, rijschool_naam):
 
         with open('rijscholen_leads.csv', 'a', newline='', encoding='utf-8') as file:
             writer = csv.writer(file)
-            writer.writerow([contact_info['rijschool_naam'], contact_info['telefoonnummers'], contact_info['emailadressen'], contact_info['websites']])
+            new_rijschool_naam = contact_info['rijschool_naam'] if contact_info['rijschool_naam'] else "None"
+            telefoonnummer = contact_info['telefoonnummers'][0] if contact_info['telefoonnummers'] else "None"
+            emailadres = contact_info['emailadressen'][0] if contact_info['emailadressen'] else "None"
+            website = contact_info['websites'][0] if contact_info['websites'] else "None"
+
+            # Verwijder dubbele aanhalingstekens
+            new_rijschool_naam = new_rijschool_naam.replace("\"", "").replace(",", "")
+            telefoonnummer = telefoonnummer.replace("\"", "").replace(",", "")
+            emailadres = emailadres.replace("\"", "").replace(",", "")
+            website = website.replace("\"", "").replace(",", "")
+
+            writer.writerow([new_rijschool_naam, telefoonnummer, emailadres, website])
         
         return contact_info
         
@@ -550,6 +563,12 @@ def start_datascraper(driver):
                                                 
                                                 # Klik op elk zoekresultaat één voor één
                                                 for i, result in enumerate(search_results):
+                                                    # if url of the current tabdoes not contain "rijschool", close the current tab
+                                                    if "rijschool" not in driver.current_url:
+                                                        print(f"  ⚠️ URL bevat geen 'rijschool', sluit tabblad...")
+                                                        driver.close()
+                                                        continue
+
                                                     try:
                                                         # Zoek de klikbare knop binnen dit resultaat
                                                         clickable_button = result.find_element(By.CSS_SELECTOR, "button.cell.cell--name")
