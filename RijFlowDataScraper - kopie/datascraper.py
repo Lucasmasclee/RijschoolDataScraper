@@ -9,6 +9,8 @@ import time
 import os
 import json
 from selenium.webdriver.common.keys import Keys
+import re
+import csv
 
 def open_edge_browser_simple():
     """
@@ -176,12 +178,120 @@ def close_browser(driver):
         driver.quit()
         print("🔒 Browser gesloten")
 
+def extract_contact_info(driver, rijschool_naam):
+    """
+    Extraheert contactgegevens van een rijschool detail pagina
+    """
+    try:
+        # Wacht tot de contactgegevens geladen zijn
+        wait = WebDriverWait(driver, 5)
+        
+        # Zoek naar de contactgegevens sectie
+        contact_selectors = [
+            "a.details__contact",
+            "a[class*='details__contact']",
+            "p a.details__contact",
+            "div a.details__contact"
+        ]
+        
+        contact_info = {
+            'rijschool_naam': rijschool_naam,
+            'telefoonnummers': [],
+            'emailadressen': [],
+            'websites': []
+        }
+        
+        # Zoek naar alle contact elementen
+        contact_elements = []
+        for selector in contact_selectors:
+            try:
+                elements = driver.find_elements(By.CSS_SELECTOR, selector)
+                if elements:
+                    contact_elements = elements
+                    print(f"    ✅ Contact elementen gevonden met selector: {selector}")
+                    break
+            except Exception:
+                continue
+        
+        if not contact_elements:
+            # Probeer een bredere zoekactie
+            try:
+                contact_elements = driver.find_elements(By.CSS_SELECTOR, "a[href*='tel'], a[href*='mailto'], a[href*='http']")
+                print(f"    🔍 Bredere zoekactie: {len(contact_elements)} elementen gevonden")
+            except Exception as e:
+                print(f"    ⚠️ Bredere zoekactie mislukt: {e}")
+        
+        if contact_elements:
+            print(f"    📍 {len(contact_elements)} contact elementen gevonden")
+            for i, element in enumerate(contact_elements):
+                try:
+                    # Haal de href en tekst op
+                    href = element.get_attribute('href')
+                    text = element.text.strip()
+                    classes = element.get_attribute('class')
+                    
+                    print(f"    🔍 Element {i+1}: href='{href}', text='{text}', classes='{classes}'")
+                    
+                    if href and text:
+                        # Telefoonnummer
+                        if 'details__contact__phone' in classes or 'tel:' in href:
+                            # Verwijder 'tel:' prefix en voeg toe aan lijst
+                            phone = href.replace('tel:', '') if 'tel:' in href else text
+                            if phone not in contact_info['telefoonnummers']:
+                                contact_info['telefoonnummers'].append(phone)
+                                print(f"    ✅ Telefoonnummer toegevoegd: {phone}")
+                        
+                        # Emailadres
+                        elif 'details__contact__email' in classes or 'mailto:' in href:
+                            # Verwijder 'mailto:' prefix en voeg toe aan lijst
+                            email = href.replace('mailto:', '') if 'mailto:' in href else text
+                            if email not in contact_info['emailadressen']:
+                                contact_info['emailadressen'].append(email)
+                                print(f"    ✅ Emailadres toegevoegd: {email}")
+                        
+                        # Website
+                        elif 'details__contact__website' in classes or ('http' in href and 'mailto:' not in href and 'tel:' not in href):
+                            # Voeg toe aan lijst
+                            website = href if 'http' in href else text
+                            if website not in contact_info['websites']:
+                                contact_info['websites'].append(website)
+                                print(f"    ✅ Website toegevoegd: {website}")
+                
+                except Exception as e:
+                    print(f"    ⚠️ Fout bij verwerken van contact element {i+1}: {e}")
+                    continue
+        else:
+            print(f"    ⚠️ Geen contact elementen gevonden")
+        
+        # Print de gevonden gegevens
+        print(f"    📞 Telefoonnummers: {contact_info['telefoonnummers']}")
+        print(f"    📧 Emailadressen: {contact_info['emailadressen']}")
+        print(f"    🌐 Websites: {contact_info['websites']}")
+
+        with open('rijscholen_leads.csv', 'a', newline='', encoding='utf-8') as file:
+            writer = csv.writer(file)
+            writer.writerow([contact_info['rijschool_naam'], contact_info['telefoonnummers'], contact_info['emailadressen'], contact_info['websites']])
+        
+        return contact_info
+        
+    except Exception as e:
+        print(f"    ❌ Fout bij extraheren van contactgegevens: {e}")
+        return {
+            'rijschool_naam': rijschool_naam,
+            'telefoonnummers': [],
+            'emailadressen': [],
+            'websites': []
+        }
+
 def start_datascraper(driver):
     """
     Start de datascraper
     """
     print("🚀 RijFlow Data Scraper - Stap 2: Start de datascraper")
     print("=" * 50)
+    
+    # Lijst om alle verzamelde gegevens bij te houden
+    alle_rijscholen_data = []
     
     try:
         # Open examen_plaatsen.json
@@ -191,11 +301,7 @@ def start_datascraper(driver):
         # Haal de plaatsnamen op uit de JSON structuur
         plaatsnamen = data.get('plaatsnamen', [])
         
-        # print(f"📋 Gevonden {len(plaatsnamen)} examenplaatsen:")
-        # for plaats in plaatsnamen:
-        #     print(f"  - {plaats}")
-        
-        # Voor elke plaats: open nieuw tabb        print(f"📋 Gevonden {len(plaatsnamen)} examenplaatsen:")
+        print(f"📋 Gevonden {len(plaatsnamen)} examenplaatsen:")
         for plaats in plaatsnamen:
             print(f"  - {plaats}")
         
@@ -239,14 +345,12 @@ def start_datascraper(driver):
                             EC.presence_of_element_located((By.CSS_SELECTOR, selector))
                         )
                         if search_input:
-                            # print(f"    ✅ Zoekbalk gevonden met selector: {selector}")
                             break
                     except Exception:
                         continue
                 
                 if search_input:
                     # Typ de plaatsnaam in de zoekbalk
-                    # print(f"  ✏️ Typ plaatsnaam: {plaats}")
                     search_input.clear()
                     search_input.send_keys(plaats)
                     search_input.send_keys(Keys.ENTER)
@@ -257,10 +361,8 @@ def start_datascraper(driver):
                     print(f"  ✅ Plaatsnaam '{plaats}' succesvol ingetypt in zoekbalk")
                     
                     # Zoek en klik op de "Auto" knop
-                    # print("   Zoek naar de 'Auto' knop...")
                     try:
                         # Oplossing 1: Maak het scherm kleiner (Ctrl + -)
-                        # print("  🔍 Probeer scherm kleiner te maken...")
                         driver.execute_script("document.body.style.zoom = '0.8'")
                         time.sleep(1)
                         
@@ -319,7 +421,6 @@ def start_datascraper(driver):
                             time.sleep(1)
                             
                             # Klik op de Auto knop
-                            # print("  🖱️ Klik op de 'Auto' knop...")
                             auto_button.click()
                             print("  ✅ Auto knop succesvol geklikt!")
                             
@@ -444,6 +545,9 @@ def start_datascraper(driver):
                                             print(f"  📍 Gevonden {len(search_results)} zoekresultaten")
                                             
                                             if search_results:
+                                                # Lijst om gegevens van deze plaats bij te houden
+                                                plaats_rijscholen = []
+                                                
                                                 # Klik op elk zoekresultaat één voor één
                                                 for i, result in enumerate(search_results):
                                                     try:
@@ -466,10 +570,89 @@ def start_datascraper(driver):
                                                             # Wacht even zodat de details kunnen laden
                                                             time.sleep(2)
                                                             
-                                                            # Sluit de details weer (klik opnieuw op dezelfde knop)
-                                                            clickable_button.click()
-                                                            print(f"  🔒 Details van resultaat {i+1} gesloten")
+                                                            # Scroll naar de contactgegevens sectie om ervoor te zorgen dat alles zichtbaar is
+                                                            print(f"    🔍 Zoek naar contactgegevens sectie...")
+                                                            try:
+                                                                # Zoek naar de contactgegevens container
+                                                                contact_container_selectors = [
+                                                                    "p:has(a.details__contact)",
+                                                                    "div:has(a.details__contact)",
+                                                                    "a.details__contact"
+                                                                ]
+                                                                
+                                                                contact_container = None
+                                                                for selector in contact_container_selectors:
+                                                                    try:
+                                                                        contact_container = driver.find_element(By.CSS_SELECTOR, selector)
+                                                                        if contact_container:
+                                                                            break
+                                                                    except Exception:
+                                                                        continue
+                                                                
+                                                                if contact_container:
+                                                                    # Scroll naar de contactgegevens sectie
+                                                                    driver.execute_script("arguments[0].scrollIntoView({block: 'center', behavior: 'smooth'});", contact_container)
+                                                                    time.sleep(1)
+                                                                    print(f"    📍 Contactgegevens sectie zichtbaar gemaakt")
+                                                                else:
+                                                                    # Fallback: scroll naar beneden om alle content zichtbaar te maken
+                                                                    print(f"    📍 Fallback: scroll naar beneden...")
+                                                                    driver.execute_script("window.scrollBy(0, 300);")
+                                                                    time.sleep(1)
+                                                                    
+                                                            except Exception as e:
+                                                                print(f"    ⚠️ Fout bij scrollen naar contactgegevens: {e}")
+                                                                # Fallback: scroll naar beneden
+                                                                driver.execute_script("window.scrollBy(0, 300);")
+                                                                time.sleep(1)
+                                                            
+                                                            # Extra wachttijd om ervoor te zorgen dat alle content geladen is
                                                             time.sleep(1)
+                                                            
+                                                            # Extraheer contactgegevens
+                                                            contact_info = extract_contact_info(driver, rijschool_naam)
+                                                            
+                                                            # Voeg plaatsnaam toe aan de contactgegevens
+                                                            contact_info['plaatsnaam'] = plaats
+                                                            
+                                                            # Voeg toe aan de lijst van deze plaats
+                                                            plaats_rijscholen.append(contact_info)
+                                                            
+                                                            # Wacht even zodat alle content geladen is voordat we proberen te sluiten
+                                                            time.sleep(1)
+                                                            
+                                                            # Sluit de details weer (klik opnieuw op dezelfde knop)
+                                                            try:
+                                                                # Controleer of de knop nog steeds klikbaar is
+                                                                if clickable_button.is_enabled() and clickable_button.is_displayed():
+                                                                    # Scroll naar de knop om ervoor te zorgen dat deze zichtbaar is
+                                                                    driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", clickable_button)
+                                                                    time.sleep(0.5)
+                                                                    
+                                                                    # Klik op de knop om te sluiten
+                                                                    clickable_button.click()
+                                                                    print(f"  🔒 Details van resultaat {i+1} gesloten")
+                                                                else:
+                                                                    print(f"  ⚠️ Knop niet meer klikbaar, probeer alternatieve methode...")
+                                                                    # Probeer de knop opnieuw te vinden
+                                                                    try:
+                                                                        new_button = result.find_element(By.CSS_SELECTOR, "button.cell.cell--name")
+                                                                        if new_button.is_enabled() and new_button.is_displayed():
+                                                                            driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", new_button)
+                                                                            time.sleep(0.5)
+                                                                            new_button.click()
+                                                                            print(f"  🔒 Details van resultaat {i+1} gesloten (alternatieve methode)")
+                                                                        else:
+                                                                            print(f"  ⚠️ Alternatieve knop ook niet klikbaar")
+                                                                    except Exception as e:
+                                                                        print(f"  ⚠️ Kon alternatieve knop niet vinden: {e}")
+                                                                
+                                                                time.sleep(1)
+                                                                
+                                                            except Exception as e:
+                                                                print(f"  ⚠️ Fout bij sluiten van details: {e}")
+                                                                # Probeer de pagina te verversen of verder te gaan
+                                                                time.sleep(1)
                                                             
                                                         else:
                                                             print(f"  ⚠️ Knop voor resultaat {i+1} is niet klikbaar")
@@ -478,7 +661,11 @@ def start_datascraper(driver):
                                                         print(f"  ❌ Fout bij klikken op resultaat {i+1}: {e}")
                                                         continue
                                                 
+                                                # Voeg alle rijschoolgegevens van deze plaats toe aan de hoofdlijst
+                                                alle_rijscholen_data.extend(plaats_rijscholen)
+                                                
                                                 print(f"  ✅ Alle {len(search_results)} zoekresultaten succesvol verwerkt!")
+                                                print(f"  📊 {len(plaats_rijscholen)} rijschoolgegevens verzameld voor {plaats}")
                                             else:
                                                 print("  ⚠️ Geen zoekresultaten gevonden")
                                                 
@@ -502,6 +689,21 @@ def start_datascraper(driver):
                 continue
 
             time.sleep(2)
+        
+        # Sla alle verzamelde gegevens op in een JSON bestand
+        print(f"\n💾 Opslaan van {len(alle_rijscholen_data)} rijschoolgegevens...")
+        
+        output_data = {
+            'totaal_rijscholen': len(alle_rijscholen_data),
+            'plaatsen_verwerkt': len(plaatsnamen),
+            'verzamelde_data': alle_rijscholen_data
+        }
+        
+        with open('rijscholen_data.json', 'w', encoding='utf-8') as file:
+            json.dump(output_data, file, ensure_ascii=False, indent=2)
+        
+        print(f"✅ Alle gegevens opgeslagen in 'rijscholen_data.json'")
+        print(f"📊 Totaal verzameld: {len(alle_rijscholen_data)} rijschoolgegevens")
         
         print(f"\n🎯 Data scraping voltooid voor alle {len(plaatsnamen)} plaatsen!")
         print("💡 Alle tabbladen zijn geopend en klaar voor verdere verwerking")
@@ -552,7 +754,7 @@ def main():
             input("\n👆 Druk op Enter om de browser te sluiten...")
             close_browser(driver)
     
-    print("\n🎯 Klaar voor de volgende stap!")
+    print("\n�� Klaar voor de volgende stap!")
 
 if __name__ == "__main__":
     print("start")
