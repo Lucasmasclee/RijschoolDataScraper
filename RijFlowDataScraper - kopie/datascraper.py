@@ -194,8 +194,74 @@ def start_datascraper(driver):
         for plaats in plaatsnamen:
             print(f"  - {plaats}")
         
-        # Hier kun je later de scraping logica toevoegen voor elke plaats
-        print("🔍 Klaar om te beginnen met data scraping...")
+        # Voor elke plaats: open nieuw tabblad en zoek
+        print("\n🔍 Start met data scraping voor elke plaats...")
+        
+        for i, plaats in enumerate(plaatsnamen):
+            print(f"\n📍 Verwerk plaats {i+1}/{len(plaatsnamen)}: {plaats}")
+            
+            try:
+                # Open nieuw tabblad
+                print("  📑 Open nieuw tabblad...")
+                driver.execute_script("window.open('');")
+                
+                # Schakel naar het nieuwe tabblad
+                driver.switch_to.window(driver.window_handles[-1])
+                
+                # Ga naar CBR rijschoolzoeker
+                print("  🌐 Navigeer naar CBR rijschoolzoeker...")
+                driver.get("https://www.cbr.nl/nl/rijschoolzoeker")
+                
+                # Wacht tot de pagina geladen is
+                wait = WebDriverWait(driver, 10)
+                
+                # Zoek de zoekbalk (zoekbalk voor plaatsnaam)
+                print("  🔍 Zoek naar de zoekbalk...")
+                
+                # Probeer verschillende selectors voor de zoekbalk
+                search_selectors = [
+                    "input[aria-label='Zoek een plaatsnaam']",
+                    "input[placeholder='Plaats']",
+                    "input.react-autosuggest_input",
+                    "input[type='text']",
+                    "input[autocomplete='off']"
+                ]
+                
+                search_input = None
+                for selector in search_selectors:
+                    try:
+                        search_input = wait.until(
+                            EC.presence_of_element_located((By.CSS_SELECTOR, selector))
+                        )
+                        if search_input:
+                            print(f"    ✅ Zoekbalk gevonden met selector: {selector}")
+                            break
+                    except Exception:
+                        continue
+                
+                if search_input:
+                    # Typ de plaatsnaam in de zoekbalk
+                    print(f"  ✏️ Typ plaatsnaam: {plaats}")
+                    search_input.clear()
+                    search_input.send_keys(plaats)
+                    
+                    # Wacht even zodat de suggesties kunnen laden
+                    time.sleep(2)
+                    
+                    print(f"  ✅ Plaatsnaam '{plaats}' succesvol ingetypt in zoekbalk")
+                    
+                else:
+                    print(f"  ❌ Kon de zoekbalk niet vinden voor plaats: {plaats}")
+                
+                # Wacht even voordat we naar de volgende plaats gaan
+                time.sleep(1)
+                
+            except Exception as e:
+                print(f"  ❌ Fout bij verwerken van plaats '{plaats}': {e}")
+                continue
+        
+        print(f"\n🎯 Data scraping voltooid voor alle {len(plaatsnamen)} plaatsen!")
+        print("💡 Alle tabbladen zijn geopend en klaar voor verdere verwerking")
         
     except FileNotFoundError:
         print("❌ examen_plaatsen.json bestand niet gevonden!")

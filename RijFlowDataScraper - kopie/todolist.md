@@ -1,15 +1,16 @@
 ✅Microsoft edge openen met headless = false
 ✅Cookies accepteren
-✅https://www.cbr.nl/nl/rijschoolzoeker openen
-Elke plaatsnaam typen in zoekbar
-plaatsnaam typen in zoekbar
-Enter klikken om te zoeken
-"Auto" klikken in lijst van voertuigen
-Alfabetisch A-Z klikken
-Voor elk zoekresultaat de naam printen
-Voor elk zoekresultaat de optie uitklappen
-Voor elk zoekresultaat de rijschoolnaam printen
-Voor elk zoekresultaat het telnummer printen
-Voor elk zoekresultaat het emailadres printen
-Voor elk zoekresultaat de website printen
-Gegevens van 9,10,11,12 opslaan in rijscholen_leads.csv
+Voor elke plaatsnaam:
+    ✅https://www.cbr.nl/nl/rijschoolzoeker openen
+    ✅Typ de plaatsnaam in de zoekbalk
+    Klik op Enter om te zoeken
+    Klik op "auto" in voertuiglijst
+    Klik op "alfabetisch" voor zoekopties
+    Voor elk zoekresultaat:
+        print de rijschoolnaam
+        Rijschoolnaam opslaan
+        Telefoonnummer opslaan
+        Website opslaan
+        Emailadres opslaan
+        Alle gegevens opslaan in rijscholen_leads.csv
+
