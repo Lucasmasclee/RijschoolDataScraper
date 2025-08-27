@@ -191,7 +191,11 @@ def start_datascraper(driver):
         # Haal de plaatsnamen op uit de JSON structuur
         plaatsnamen = data.get('plaatsnamen', [])
         
-        print(f"📋 Gevonden {len(plaatsnamen)} examenplaatsen:")
+        # print(f"📋 Gevonden {len(plaatsnamen)} examenplaatsen:")
+        # for plaats in plaatsnamen:
+        #     print(f"  - {plaats}")
+        
+        # Voor elke plaats: open nieuw tabb        print(f"📋 Gevonden {len(plaatsnamen)} examenplaatsen:")
         for plaats in plaatsnamen:
             print(f"  - {plaats}")
         
@@ -255,6 +259,11 @@ def start_datascraper(driver):
                     # Zoek en klik op de "Auto" knop
                     print("  🚗 Zoek naar de 'Auto' knop...")
                     try:
+                        # Oplossing 1: Maak het scherm kleiner (Ctrl + -)
+                        print("  🔍 Probeer scherm kleiner te maken...")
+                        driver.execute_script("document.body.style.zoom = '0.8'")
+                        time.sleep(1)
+                        
                         # Probeer verschillende selectors voor de Auto knop
                         auto_button_selectors = [
                             "a.vehicle",
@@ -281,7 +290,34 @@ def start_datascraper(driver):
                             except Exception:
                                 continue
                         
+                        # Oplossing 2: Als knop nog niet gevonden, scroll naar beneden
+                        if not auto_button:
+                            print("  🔍 Knop niet gevonden, scroll naar beneden...")
+                            driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+                            time.sleep(2)
+                            
+                            # Probeer opnieuw de knoppen te vinden na het scrollen
+                            for selector in auto_button_selectors:
+                                try:
+                                    auto_button = wait.until(
+                                        EC.element_to_be_clickable((By.CSS_SELECTOR, selector))
+                                    )
+                                    if auto_button:
+                                        # Controleer of dit de juiste knop is (bevat "Auto" tekst)
+                                        vehicle_name = auto_button.find_element(By.CSS_SELECTOR, ".vehicle__name")
+                                        if "Auto" in vehicle_name.text:
+                                            print(f"  ✅ Auto knop gevonden na scrollen met selector: {selector}")
+                                            break
+                                        else:
+                                            auto_button = None
+                                except Exception:
+                                    continue
+                        
                         if auto_button:
+                            # Scroll naar de knop om ervoor te zorgen dat deze zichtbaar is
+                            driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", auto_button)
+                            time.sleep(1)
+                            
                             # Klik op de Auto knop
                             print("  🖱️ Klik op de 'Auto' knop...")
                             auto_button.click()
@@ -290,16 +326,10 @@ def start_datascraper(driver):
                             # Wacht even zodat de pagina kan laden na het klikken
                             time.sleep(3)
                         else:
-                            print("  ❌ Kon de 'Auto' knop niet vinden")
+                            print("  ❌ Kon de 'Auto' knop niet vinden, zelfs na scrollen")
                             
                     except Exception as e:
                         print(f"  ❌ Fout bij het klikken op de 'Auto' knop: {e}")
-                    
-                else:
-                    print(f"  ❌ Kon de zoekbalk niet vinden voor plaats: {plaats}")
-                
-                # Wacht even voordat we naar de volgende plaats gaan
-                time.sleep(1)
                 
             except Exception as e:
                 print(f"  ❌ Fout bij verwerken van plaats '{plaats}': {e}")
