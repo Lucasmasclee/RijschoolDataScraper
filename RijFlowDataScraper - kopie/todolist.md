@@ -3,8 +3,8 @@
 Voor elke plaatsnaam:
     ✅https://www.cbr.nl/nl/rijschoolzoeker openen
     ✅Typ de plaatsnaam in de zoekbalk
-    Klik op Enter om te zoeken
-    Klik op "auto" in voertuiglijst
+    ✅Klik op Enter om te zoeken
+    ✅Klik op "auto" in voertuiglijst
     Klik op "alfabetisch" voor zoekopties
     Voor elk zoekresultaat:
         print de rijschoolnaam

@@ -252,6 +252,49 @@ def start_datascraper(driver):
                     
                     print(f"  ✅ Plaatsnaam '{plaats}' succesvol ingetypt in zoekbalk")
                     
+                    # Zoek en klik op de "Auto" knop
+                    print("  🚗 Zoek naar de 'Auto' knop...")
+                    try:
+                        # Probeer verschillende selectors voor de Auto knop
+                        auto_button_selectors = [
+                            "a.vehicle",
+                            "a[class*='vehicle']",
+                            "a:has(.vehicle__name:contains('Auto'))",
+                            "a:has(.vehicle__name)"
+                        ]
+                        
+                        auto_button = None
+                        for selector in auto_button_selectors:
+                            try:
+                                # Wacht tot de knop zichtbaar is
+                                auto_button = wait.until(
+                                    EC.element_to_be_clickable((By.CSS_SELECTOR, selector))
+                                )
+                                if auto_button:
+                                    # Controleer of dit de juiste knop is (bevat "Auto" tekst)
+                                    vehicle_name = auto_button.find_element(By.CSS_SELECTOR, ".vehicle__name")
+                                    if "Auto" in vehicle_name.text:
+                                        print(f"  ✅ Auto knop gevonden met selector: {selector}")
+                                        break
+                                    else:
+                                        auto_button = None
+                            except Exception:
+                                continue
+                        
+                        if auto_button:
+                            # Klik op de Auto knop
+                            print("  🖱️ Klik op de 'Auto' knop...")
+                            auto_button.click()
+                            print("  ✅ Auto knop succesvol geklikt!")
+                            
+                            # Wacht even zodat de pagina kan laden na het klikken
+                            time.sleep(3)
+                        else:
+                            print("  ❌ Kon de 'Auto' knop niet vinden")
+                            
+                    except Exception as e:
+                        print(f"  ❌ Fout bij het klikken op de 'Auto' knop: {e}")
+                    
                 else:
                     print(f"  ❌ Kon de zoekbalk niet vinden voor plaats: {plaats}")
                 
