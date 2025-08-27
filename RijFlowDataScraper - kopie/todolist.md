@@ -5,7 +5,7 @@ Voor elke plaatsnaam:
     ✅Typ de plaatsnaam in de zoekbalk
     ✅Klik op Enter om te zoeken
     ✅Klik op "auto" in voertuiglijst
-    Klik op "alfabetisch" voor zoekopties
+    ✅Klik op "alfabetisch" voor zoekopties
     Voor elk zoekresultaat:
         print de rijschoolnaam
         Rijschoolnaam opslaan

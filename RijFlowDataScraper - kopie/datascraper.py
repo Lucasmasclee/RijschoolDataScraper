@@ -246,7 +246,7 @@ def start_datascraper(driver):
                 
                 if search_input:
                     # Typ de plaatsnaam in de zoekbalk
-                    print(f"  ✏️ Typ plaatsnaam: {plaats}")
+                    # print(f"  ✏️ Typ plaatsnaam: {plaats}")
                     search_input.clear()
                     search_input.send_keys(plaats)
                     search_input.send_keys(Keys.ENTER)
@@ -257,19 +257,19 @@ def start_datascraper(driver):
                     print(f"  ✅ Plaatsnaam '{plaats}' succesvol ingetypt in zoekbalk")
                     
                     # Zoek en klik op de "Auto" knop
-                    print("  🚗 Zoek naar de 'Auto' knop...")
+                    # print("   Zoek naar de 'Auto' knop...")
                     try:
                         # Oplossing 1: Maak het scherm kleiner (Ctrl + -)
-                        print("  🔍 Probeer scherm kleiner te maken...")
+                        # print("  🔍 Probeer scherm kleiner te maken...")
                         driver.execute_script("document.body.style.zoom = '0.8'")
                         time.sleep(1)
                         
                         # Probeer verschillende selectors voor de Auto knop
                         auto_button_selectors = [
                             "a.vehicle",
-                            "a[class*='vehicle']",
-                            "a:has(.vehicle__name:contains('Auto'))",
-                            "a:has(.vehicle__name)"
+                            # "a[class*='vehicle']",
+                            # "a:has(.vehicle__name:contains('Auto'))",
+                            # "a:has(.vehicle__name)"
                         ]
                         
                         auto_button = None
@@ -319,12 +319,131 @@ def start_datascraper(driver):
                             time.sleep(1)
                             
                             # Klik op de Auto knop
-                            print("  🖱️ Klik op de 'Auto' knop...")
+                            # print("  🖱️ Klik op de 'Auto' knop...")
                             auto_button.click()
                             print("  ✅ Auto knop succesvol geklikt!")
                             
                             # Wacht even zodat de pagina kan laden na het klikken
                             time.sleep(3)
+                            
+                            # Zoek en klik op de volgende knop (bijvoorbeeld "Alfabetisch" knop)
+                            # print("  🔍 Zoek naar de volgende knop...")
+                            try:
+                                # Wacht even zodat de pagina volledig geladen is na het klikken op Auto
+                                print("  ⏳ Wacht tot pagina geladen is...")
+                                time.sleep(2)
+                                
+                                # Probeer verschillende strategieën om de Alfabetisch knop te vinden
+                                print("  🔍 Zoek naar de 'Alfabetisch' knop...")
+                                
+                                # Strategie 1: Zoek direct naar de knop met XPath op basis van tekst
+                                try:
+                                    print("  🔍 Strategie 1: Zoek met XPath op tekst...")
+                                    alfabetisch_button = wait.until(
+                                        EC.element_to_be_clickable((By.XPATH, "//button[contains(text(), 'Alfabetisch')]"))
+                                    )
+                                    if alfabetisch_button:
+                                        print(f"  ✅ Alfabetisch knop gevonden met XPath: '{alfabetisch_button.text.strip()}'")
+                                        next_button = alfabetisch_button
+                                except Exception as e:
+                                    print(f"  ⚠️ Strategie 1 mislukt: {e}")
+                                
+                                # Strategie 2: Zoek naar alle knoppen met sorting_link class
+                                if not next_button:
+                                    try:
+                                        print("  🔍 Strategie 2: Zoek naar knoppen met 'sorting_link' class...")
+                                        
+                                        # Wacht tot er knoppen zichtbaar zijn
+                                        wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "button.sorting_link")))
+                                        
+                                        # Zoek alle knoppen met sorting_link class
+                                        sorting_buttons = driver.find_elements(By.CSS_SELECTOR, "button.sorting_link")
+                                        print(f"  📍 Gevonden {len(sorting_buttons)} sorting knoppen")
+                                        
+                                        for button in sorting_buttons:
+                                            try:
+                                                button_text = button.text.strip()
+                                                print(f"  🔍 Controleer knop: '{button_text}'")
+                                                
+                                                # Zoek naar de knop met "Alfabetisch" tekst
+                                                if "Alfabetisch" in button_text or "Alphabetical" in button_text:
+                                                    next_button = button
+                                                    print(f"  ✅ Alfabetisch knop gevonden: '{button_text}'")
+                                                    break
+                                            except Exception as e:
+                                                print(f"  ⚠️ Fout bij controleren van knop: {e}")
+                                                continue
+                                    except Exception as e:
+                                        print(f"  ⚠️ Strategie 2 mislukt: {e}")
+                                
+                                # Strategie 3: Zoek naar de ul.sorting container en dan naar de knop
+                                if not next_button:
+                                    try:
+                                        print("  🔍 Strategie 3: Zoek naar ul.sorting container...")
+                                        
+                                        # Zoek eerst naar de ul.sorting container
+                                        sorting_container = wait.until(
+                                            EC.presence_of_element_located((By.CSS_SELECTOR, "ul.sorting"))
+                                        )
+                                        
+                                        # Zoek dan naar de knop binnen deze container
+                                        alfabetisch_button = sorting_container.find_element(
+                                            By.XPATH, ".//button[contains(text(), 'Alfabetisch')]"
+                                        )
+                                        
+                                        if alfabetisch_button:
+                                            print(f"  ✅ Alfabetisch knop gevonden in sorting container: '{alfabetisch_button.text.strip()}'")
+                                            next_button = alfabetisch_button
+                                    except Exception as e:
+                                        print(f"  ⚠️ Strategie 3 mislukt: {e}")
+                                
+                                # Strategie 4: Zoek naar alle knoppen op de pagina en filter op tekst
+                                if not next_button:
+                                    try:
+                                        print("  🔍 Strategie 4: Zoek naar alle knoppen op de pagina...")
+                                        
+                                        # Zoek alle knoppen op de pagina
+                                        all_buttons = driver.find_elements(By.TAG_NAME, "button")
+                                        print(f"  📍 Gevonden {len(all_buttons)} knoppen op de pagina")
+                                        
+                                        for button in all_buttons:
+                                            try:
+                                                button_text = button.text.strip()
+                                                if button_text and ("Alfabetisch" in button_text or "Alphabetical" in button_text):
+                                                    next_button = button
+                                                    print(f"  ✅ Alfabetisch knop gevonden via algemene zoekactie: '{button_text}'")
+                                                    break
+                                            except Exception:
+                                                continue
+                                    except Exception as e:
+                                        print(f"  ⚠️ Strategie 4 mislukt: {e}")
+                                
+                                if next_button:
+                                    # Scroll naar de knop om ervoor te zorgen dat deze zichtbaar is
+                                    driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", next_button)
+                                    time.sleep(1)
+                                    
+                                    # Controleer of de knop klikbaar is
+                                    if next_button.is_enabled() and next_button.is_displayed():
+                                        # Klik op de volgende knop
+                                        print(f"  🖱️ Klik op de '{next_button.text.strip()}' knop...")
+                                        next_button.click()
+                                        print(f"  ✅ '{next_button.text.strip()}' knop succesvol geklikt!")
+                                        
+                                        # Wacht even zodat de pagina kan laden na het klikken
+                                        time.sleep(3)
+                                    else:
+                                        print(f"  ⚠️ Knop '{next_button.text.strip()}' is niet klikbaar")
+                                else:
+                                    print("  ❌ Kon de 'Alfabetisch' knop niet vinden met alle strategieën")
+                                    print("  💡 Mogelijke oorzaken:")
+                                    print("     - De knop is nog niet geladen")
+                                    print("     - De knop heeft een andere tekst")
+                                    print("     - De pagina structuur is veranderd")
+                                    print("  🔍 Probeer handmatig de knop te vinden of controleer de pagina")
+                                    
+                            except Exception as e:
+                                print(f"  ⚠️ Fout bij het klikken op de volgende knop: {e}")
                         else:
                             print("  ❌ Kon de 'Auto' knop niet vinden, zelfs na scrollen")
                             
