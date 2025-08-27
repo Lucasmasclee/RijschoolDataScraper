@@ -12,6 +12,8 @@ from selenium.webdriver.common.keys import Keys
 import re
 import csv
 
+list_of_rijscholen = []
+
 def open_edge_browser_simple():
     """
     Eenvoudige methode om Edge te openen - probeert direct zonder webdriver-manager
@@ -230,7 +232,7 @@ def extract_contact_info(driver, rijschool_naam):
                     text = element.text.strip()
                     classes = element.get_attribute('class')
                     
-                    print(f"    🔍 Element {i+1}: href='{href}', text='{text}', classes='{classes}'")
+                    # print(f"    🔍 Element {i+1}: href='{href}', text='{text}', classes='{classes}'")
                     
                     if href and text:
                         # Telefoonnummer
@@ -563,11 +565,10 @@ def start_datascraper(driver):
                                                 
                                                 # Klik op elk zoekresultaat één voor één
                                                 for i, result in enumerate(search_results):
-                                                    # if url of the current tabdoes not contain "rijschool", close the current tab
-                                                    if "rijschool" not in driver.current_url:
-                                                        print(f"  ⚠️ URL bevat geen 'rijschool', sluit tabblad...")
+                                                    # close all tabs that do not contain "rijschool"
+                                                    while "rijschool" not in driver.current_url:
                                                         driver.close()
-                                                        continue
+                                                        driver.switch_to.window(driver.window_handles[0])
 
                                                     try:
                                                         # Zoek de klikbare knop binnen dit resultaat
@@ -576,6 +577,9 @@ def start_datascraper(driver):
                                                         if clickable_button and clickable_button.is_enabled() and clickable_button.is_displayed():
                                                             # Haal de rijschoolnaam op voor logging
                                                             rijschool_naam = clickable_button.text.strip()
+                                                            if rijschool_naam in list_of_rijscholen:
+                                                                print(f"  ⚠️ Rijschool {rijschool_naam} al verwerkt, sluit tabblad...")
+                                                                continue
                                                             print(f"  🖱️ Klik op resultaat {i+1}/{len(search_results)}: {rijschool_naam[:50]}...")
                                                             
                                                             # Scroll naar de knop om ervoor te zorgen dat deze zichtbaar is
@@ -584,13 +588,13 @@ def start_datascraper(driver):
                                                             
                                                             # Klik op de knop
                                                             clickable_button.click()
-                                                            print(f"  ✅ Resultaat {i+1} succesvol geklikt!")
+                                                            # print(f"  ✅ Resultaat {i+1} succesvol geklikt!")
                                                             
                                                             # Wacht even zodat de details kunnen laden
                                                             time.sleep(2)
                                                             
                                                             # Scroll naar de contactgegevens sectie om ervoor te zorgen dat alles zichtbaar is
-                                                            print(f"    🔍 Zoek naar contactgegevens sectie...")
+                                                            # print(f"    🔍 Zoek naar contactgegevens sectie...")
                                                             try:
                                                                 # Zoek naar de contactgegevens container
                                                                 contact_container_selectors = [
@@ -612,7 +616,7 @@ def start_datascraper(driver):
                                                                     # Scroll naar de contactgegevens sectie
                                                                     driver.execute_script("arguments[0].scrollIntoView({block: 'center', behavior: 'smooth'});", contact_container)
                                                                     time.sleep(1)
-                                                                    print(f"    📍 Contactgegevens sectie zichtbaar gemaakt")
+                                                                    # print(f"    📍 Contactgegevens sectie zichtbaar gemaakt")
                                                                 else:
                                                                     # Fallback: scroll naar beneden om alle content zichtbaar te maken
                                                                     print(f"    📍 Fallback: scroll naar beneden...")
@@ -650,7 +654,7 @@ def start_datascraper(driver):
                                                                     
                                                                     # Klik op de knop om te sluiten
                                                                     clickable_button.click()
-                                                                    print(f"  🔒 Details van resultaat {i+1} gesloten")
+                                                                    # print(f"  🔒 Details van resultaat {i+1} gesloten")
                                                                 else:
                                                                     print(f"  ⚠️ Knop niet meer klikbaar, probeer alternatieve methode...")
                                                                     # Probeer de knop opnieuw te vinden
@@ -776,6 +780,13 @@ def main():
     print("\n�� Klaar voor de volgende stap!")
 
 if __name__ == "__main__":
+    with open('rijscholen_leads.csv', 'r', encoding='utf-8') as file:
+        reader = csv.reader(file)
+        for row in reader:
+            list_of_rijscholen.append(row[0])
+
+    print(list_of_rijscholen)
+
     print("start")
     main()
     print("end")
