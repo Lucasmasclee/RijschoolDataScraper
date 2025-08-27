@@ -186,18 +186,26 @@ def main():
     
     if driver:
         try:
-            # Test: ga naar een eenvoudige pagina om te controleren of alles werkt
-            print("🌐 Test: ga naar Google...")
+            # Ga naar Google om cookies te accepteren
+            print("🌐 Ga naar Google om cookies te accepteren...")
             driver.get("https://www.google.com")
             
             # Probeer automatisch cookies te accepteren
             accept_cookies(driver)
             
+            # Wacht even zodat de cookies verwerkt zijn
+            print("⏳ Wacht 2 seconden zodat cookies verwerkt zijn...")
+            time.sleep(2)
+            
+            # Ga naar de CBR rijschoolzoeker
+            print("🌐 Ga naar CBR rijschoolzoeker...")
+            driver.get("https://www.cbr.nl/nl/rijschoolzoeker")
+            
             # Wacht even zodat je kunt zien wat er gebeurt
             print("⏳ Wacht 5 seconden zodat je kunt zien wat er gebeurt...")
             time.sleep(5)
             
-            print("✅ Test succesvol! Browser werkt correct.")
+            print("✅ CBR rijschoolzoeker succesvol geopend!")
             
         except Exception as e:
             print(f"❌ Fout tijdens test: {e}")
