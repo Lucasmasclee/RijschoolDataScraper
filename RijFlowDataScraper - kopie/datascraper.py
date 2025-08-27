@@ -8,6 +8,7 @@ from webdriver_manager.microsoft import EdgeChromiumDriverManager
 import time
 import os
 import json
+from selenium.webdriver.common.keys import Keys
 
 def open_edge_browser_simple():
     """
@@ -244,6 +245,7 @@ def start_datascraper(driver):
                     print(f"  ✏️ Typ plaatsnaam: {plaats}")
                     search_input.clear()
                     search_input.send_keys(plaats)
+                    search_input.send_keys(Keys.ENTER)
                     
                     # Wacht even zodat de suggesties kunnen laden
                     time.sleep(2)
