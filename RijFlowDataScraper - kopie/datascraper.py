@@ -7,6 +7,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.microsoft import EdgeChromiumDriverManager
 import time
 import os
+import json
 
 def open_edge_browser_simple():
     """
@@ -174,6 +175,35 @@ def close_browser(driver):
         driver.quit()
         print("🔒 Browser gesloten")
 
+def start_datascraper(driver):
+    """
+    Start de datascraper
+    """
+    print("🚀 RijFlow Data Scraper - Stap 2: Start de datascraper")
+    print("=" * 50)
+    
+    try:
+        # Open examen_plaatsen.json
+        with open('examen_plaatsen.json', 'r', encoding='utf-8') as file:
+            data = json.load(file)
+        
+        # Haal de plaatsnamen op uit de JSON structuur
+        plaatsnamen = data.get('plaatsnamen', [])
+        
+        print(f"📋 Gevonden {len(plaatsnamen)} examenplaatsen:")
+        for plaats in plaatsnamen:
+            print(f"  - {plaats}")
+        
+        # Hier kun je later de scraping logica toevoegen voor elke plaats
+        print("🔍 Klaar om te beginnen met data scraping...")
+        
+    except FileNotFoundError:
+        print("❌ examen_plaatsen.json bestand niet gevonden!")
+    except json.JSONDecodeError as e:
+        print(f"❌ Fout bij het lezen van JSON: {e}")
+    except Exception as e:
+        print(f"❌ Onverwachte fout: {e}")
+
 def main():
     """
     Hoofdfunctie om de browser te openen en te testen
@@ -200,15 +230,13 @@ def main():
             # Ga naar de CBR rijschoolzoeker
             print("🌐 Ga naar CBR rijschoolzoeker...")
             driver.get("https://www.cbr.nl/nl/rijschoolzoeker")
-            
-            # Wacht even zodat je kunt zien wat er gebeurt
-            print("⏳ Wacht 5 seconden zodat je kunt zien wat er gebeurt...")
-            time.sleep(5)
+
+            start_datascraper(driver)
             
             print("✅ CBR rijschoolzoeker succesvol geopend!")
             
         except Exception as e:
-            print(f"❌ Fout tijdens test: {e}")
+            print(f"❌ Fout tijdens uitvoering: {e}")
         
         finally:
             # Vraag gebruiker of ze de browser willen sluiten

@@ -1,6 +1,7 @@
 ✅Microsoft edge openen met headless = false
 ✅Cookies accepteren
 ✅https://www.cbr.nl/nl/rijschoolzoeker openen
+Elke plaatsnaam typen in zoekbar
 plaatsnaam typen in zoekbar
 Enter klikken om te zoeken
 "Auto" klikken in lijst van voertuigen
