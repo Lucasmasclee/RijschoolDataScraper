@@ -235,7 +235,7 @@ def start_datascraper(driver):
                             EC.presence_of_element_located((By.CSS_SELECTOR, selector))
                         )
                         if search_input:
-                            print(f"    ✅ Zoekbalk gevonden met selector: {selector}")
+                            # print(f"    ✅ Zoekbalk gevonden met selector: {selector}")
                             break
                     except Exception:
                         continue
@@ -261,6 +261,8 @@ def start_datascraper(driver):
             except Exception as e:
                 print(f"  ❌ Fout bij verwerken van plaats '{plaats}': {e}")
                 continue
+
+            time.sleep(2)
         
         print(f"\n🎯 Data scraping voltooid voor alle {len(plaatsnamen)} plaatsen!")
         print("💡 Alle tabbladen zijn geopend en klaar voor verdere verwerking")
