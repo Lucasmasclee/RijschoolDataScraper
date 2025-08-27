@@ -431,6 +431,59 @@ def start_datascraper(driver):
                                         
                                         # Wacht even zodat de pagina kan laden na het klikken
                                         time.sleep(3)
+                                        
+                                        # Zoek en klik op alle zoekresultaten
+                                        print("  🔍 Zoek naar alle zoekresultaten...")
+                                        try:
+                                            # Wacht tot de zoekresultaten geladen zijn
+                                            wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "div.table-row")))
+                                            time.sleep(2)  # Extra wachttijd voor volledige laad
+                                            
+                                            # Zoek alle zoekresultaten
+                                            search_results = driver.find_elements(By.CSS_SELECTOR, "div.table-row")
+                                            print(f"  📍 Gevonden {len(search_results)} zoekresultaten")
+                                            
+                                            if search_results:
+                                                # Klik op elk zoekresultaat één voor één
+                                                for i, result in enumerate(search_results):
+                                                    try:
+                                                        # Zoek de klikbare knop binnen dit resultaat
+                                                        clickable_button = result.find_element(By.CSS_SELECTOR, "button.cell.cell--name")
+                                                        
+                                                        if clickable_button and clickable_button.is_enabled() and clickable_button.is_displayed():
+                                                            # Haal de rijschoolnaam op voor logging
+                                                            rijschool_naam = clickable_button.text.strip()
+                                                            print(f"  🖱️ Klik op resultaat {i+1}/{len(search_results)}: {rijschool_naam[:50]}...")
+                                                            
+                                                            # Scroll naar de knop om ervoor te zorgen dat deze zichtbaar is
+                                                            driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", clickable_button)
+                                                            time.sleep(0.5)
+                                                            
+                                                            # Klik op de knop
+                                                            clickable_button.click()
+                                                            print(f"  ✅ Resultaat {i+1} succesvol geklikt!")
+                                                            
+                                                            # Wacht even zodat de details kunnen laden
+                                                            time.sleep(2)
+                                                            
+                                                            # Sluit de details weer (klik opnieuw op dezelfde knop)
+                                                            clickable_button.click()
+                                                            print(f"  🔒 Details van resultaat {i+1} gesloten")
+                                                            time.sleep(1)
+                                                            
+                                                        else:
+                                                            print(f"  ⚠️ Knop voor resultaat {i+1} is niet klikbaar")
+                                                            
+                                                    except Exception as e:
+                                                        print(f"  ❌ Fout bij klikken op resultaat {i+1}: {e}")
+                                                        continue
+                                                
+                                                print(f"  ✅ Alle {len(search_results)} zoekresultaten succesvol verwerkt!")
+                                            else:
+                                                print("  ⚠️ Geen zoekresultaten gevonden")
+                                                
+                                        except Exception as e:
+                                            print(f"  ❌ Fout bij verwerken van zoekresultaten: {e}")
                                     else:
                                         print(f"  ⚠️ Knop '{button_text}' is niet klikbaar (enabled: {alfabetisch_button.is_enabled()}, displayed: {alfabetisch_button.is_displayed()})")
                                 else:

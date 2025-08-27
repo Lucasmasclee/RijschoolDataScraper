@@ -7,7 +7,8 @@ Voor elke plaatsnaam:
     ✅Klik op "auto" in voertuiglijst
     ✅Klik op "alfabetisch" voor zoekopties
     Voor elk zoekresultaat:
-        print de rijschoolnaam
+        ✅Zoekresultaat klikken
+        ✅print de rijschoolnaam
         Rijschoolnaam opslaan
         Telefoonnummer opslaan
         Website opslaan
