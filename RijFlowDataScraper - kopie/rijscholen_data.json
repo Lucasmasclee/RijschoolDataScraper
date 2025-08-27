@@ -1,0 +1,3307 @@
+{
+  "totaal_rijscholen": 306,
+  "plaatsen_verwerkt": 54,
+  "verzamelde_data": [
+    {
+      "rijschool_naam": "Agere Opleidingen B.V.",
+      "telefoonnummers": [
+        "0546 563 050",
+        "06 55 80 74 92"
+      ],
+      "emailadressen": [
+        "verkoop@agere.nl"
+      ],
+      "websites": [
+        "https://www.agere.nl/"
+      ],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Autorijschool Ebbers",
+      "telefoonnummers": [
+        "0546 563 050",
+        "06 55 80 74 92",
+        "074 266 75 75",
+        "06 51 00 20 15"
+      ],
+      "emailadressen": [
+        "verkoop@agere.nl",
+        "info@verkeersschoolebbers.nl"
+      ],
+      "websites": [
+        "https://www.agere.nl/",
+        "http://www.verkeersschoolebbers.nl/"
+      ],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Autorijschool Gemma Volmer",
+      "telefoonnummers": [
+        "0546 563 050",
+        "06 55 80 74 92"
+      ],
+      "emailadressen": [
+        "verkoop@agere.nl",
+        "GEMMAVOLMER@HOTMAIL.COM"
+      ],
+      "websites": [
+        "https://www.agere.nl/"
+      ],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "autorijschool Jolanda",
+      "telefoonnummers": [
+        "0546 563 050",
+        "06 55 80 74 92",
+        "0610980838"
+      ],
+      "emailadressen": [
+        "verkoop@agere.nl"
+      ],
+      "websites": [
+        "https://www.agere.nl/"
+      ],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Autorijschool Kamphuis",
+      "telefoonnummers": [
+        "0546 563 050",
+        "06 55 80 74 92",
+        "06 58825173"
+      ],
+      "emailadressen": [
+        "verkoop@agere.nl"
+      ],
+      "websites": [
+        "https://www.agere.nl/",
+        "http://www.rijschoolsilviakamphuis.nl/"
+      ],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Autorijschool Lammertink",
+      "telefoonnummers": [
+        "06 58825173",
+        "0547 38 34 40",
+        "06 16 84 09 93"
+      ],
+      "emailadressen": [
+        "hjg.lammertink@hetnet.nl"
+      ],
+      "websites": [
+        "http://www.rijschoolsilviakamphuis.nl/",
+        "http://www.autorijschoollammertink.nl/"
+      ],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Autorijschool Maria Tuinbeek",
+      "telefoonnummers": [
+        "0654202184"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Autorijschool Miranda Zuur",
+      "telefoonnummers": [
+        "06 34 73 77 80"
+      ],
+      "emailadressen": [],
+      "websites": [
+        "https://www.tonniezuur.nl/"
+      ],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Autorijschool Oude Wesselink",
+      "telefoonnummers": [
+        "0546 63 12 28"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Autorijschool Ralf Profijt",
+      "telefoonnummers": [
+        "06 46 12 99 13"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Autorijschool Ron Peters",
+      "telefoonnummers": [
+        "0546 82 96 77",
+        "06 29 51 64 67"
+      ],
+      "emailadressen": [
+        "rijschoolronpeters@home.nl"
+      ],
+      "websites": [],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Autorijschool Sarkis",
+      "telefoonnummers": [
+        "0546 82 87 67",
+        "06 42 11 69 48"
+      ],
+      "emailadressen": [
+        "autorijschoolsarkis@gmail.com"
+      ],
+      "websites": [],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Autorijschool Schutte",
+      "telefoonnummers": [
+        "0647498990"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Autorijschool Ten Brinke",
+      "telefoonnummers": [
+        "0523 23 20 04",
+        "06 10 29 63 23"
+      ],
+      "emailadressen": [
+        "g.tenbrinke@zonnet.nl"
+      ],
+      "websites": [],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Autorijschool Ugurel",
+      "telefoonnummers": [
+        "0546 82 77 01",
+        "06 54 92 44 47"
+      ],
+      "emailadressen": [
+        "ugurel62@hotmail.com"
+      ],
+      "websites": [],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Autorijschool Van de Riet",
+      "telefoonnummers": [
+        "0546785350",
+        "0622948629"
+      ],
+      "emailadressen": [
+        "info@autorijschoolvanderiet.nl"
+      ],
+      "websites": [],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Autorijschool Westerhoff",
+      "telefoonnummers": [
+        "0644046927"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "AutorijschoolBeslist",
+      "telefoonnummers": [
+        "06 10 90 08 93"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Bliksem Opleidingen",
+      "telefoonnummers": [
+        "06 17 58 50 92"
+      ],
+      "emailadressen": [],
+      "websites": [
+        "https://www.bliksemopleidingen.nl/"
+      ],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "BOP TUBBERGEN",
+      "telefoonnummers": [
+        "06 18 72 92 65"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "De Twentse Rijopleiding",
+      "telefoonnummers": [
+        "06 18 05 39 48"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "De Twentse Rijopleiding",
+      "telefoonnummers": [
+        "0653307159"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Drive Yourself",
+      "telefoonnummers": [
+        "0546 800404",
+        "06 54 34 86 49"
+      ],
+      "emailadressen": [
+        "drive-youself@home.nl"
+      ],
+      "websites": [],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "drive2gether.nl",
+      "telefoonnummers": [
+        "06 57 45 33 80"
+      ],
+      "emailadressen": [],
+      "websites": [
+        "https://www.drive2gether.nl/"
+      ],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Edwin Broers t.h.o.d.n. NXXT",
+      "telefoonnummers": [
+        "0657755015"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Firma Autorijschool Relker",
+      "telefoonnummers": [
+        "0547 36 16 16"
+      ],
+      "emailadressen": [
+        "relker@relker.nl"
+      ],
+      "websites": [
+        "http://www.relker.nl/"
+      ],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "fortune rijschool",
+      "telefoonnummers": [
+        "0547 36 16 16",
+        "0622101583"
+      ],
+      "emailadressen": [
+        "relker@relker.nl"
+      ],
+      "websites": [
+        "http://www.relker.nl/"
+      ],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Hartemink Verkeersopleidingen B.V.",
+      "telefoonnummers": [
+        "0547 36 16 16",
+        "0545 47 20 10",
+        "06 53 11 31 35"
+      ],
+      "emailadressen": [
+        "relker@relker.nl",
+        "info@hartemink.nl"
+      ],
+      "websites": [
+        "http://www.relker.nl/",
+        "http://www.hartemink.nl/"
+      ],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Hofman Advies, Training en Opleiding",
+      "telefoonnummers": [
+        "0547 36 16 16",
+        "085 273 63 60",
+        "06 12 45 44 23"
+      ],
+      "emailadressen": [
+        "relker@relker.nl",
+        "info@janhofman.nl"
+      ],
+      "websites": [
+        "http://www.relker.nl/"
+      ],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Rijschool Hermen",
+      "telefoonnummers": [
+        "0547 36 16 16",
+        "054 854 10 95",
+        "06 40 09 94 87"
+      ],
+      "emailadressen": [
+        "relker@relker.nl",
+        "hermen@rijschoolhermen.nl"
+      ],
+      "websites": [
+        "http://www.rijschoolhermen.nl/"
+      ],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Rijschool Ingrid Abbink",
+      "telefoonnummers": [
+        "0546 69 70 36"
+      ],
+      "emailadressen": [
+        "g.schooten1@kpnplanet.nl"
+      ],
+      "websites": [],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Rijschool Joke V.O.F.",
+      "telefoonnummers": [
+        "0547 36 27 50",
+        "06 10 08 88 88"
+      ],
+      "emailadressen": [
+        "info@rijschool-joke.nl"
+      ],
+      "websites": [
+        "http://www.rijschool-joke.nl/"
+      ],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Rijschool Jonker",
+      "telefoonnummers": [],
+      "emailadressen": [
+        "rijschooljonker@hotmail.com"
+      ],
+      "websites": [
+        "http://www.rijschooljonker.nl/"
+      ],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Rijschool Koos Bos",
+      "telefoonnummers": [
+        "0546811659",
+        "06 48 08 85 46"
+      ],
+      "emailadressen": [
+        "koos@rijschoolkoosbos.nl"
+      ],
+      "websites": [
+        "https://rijschoolkoosbos.nl/"
+      ],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Rijschool Lansink",
+      "telefoonnummers": [
+        "0546 81 53 09"
+      ],
+      "emailadressen": [
+        "info@rijschool-guidolansink.nl"
+      ],
+      "websites": [
+        "http://www.rijschool-guidolansink.nl/"
+      ],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Rijschool Ligtenberg",
+      "telefoonnummers": [
+        "0523 27 08 78"
+      ],
+      "emailadressen": [
+        "info@rijschoolligtenberg.nl"
+      ],
+      "websites": [
+        "http://www.rijschoolligtenberg.nl/"
+      ],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Rijschool Nijmeijer",
+      "telefoonnummers": [
+        "0548624176",
+        "0622397664"
+      ],
+      "emailadressen": [
+        "info@rijschoolnijmeijer.nl"
+      ],
+      "websites": [],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Rijschool Only You by Trends",
+      "telefoonnummers": [
+        "06 40 83 54 31"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Rijschool Pieper",
+      "telefoonnummers": [
+        "06 11 10 80 18"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Rijschool Plaggenmars",
+      "telefoonnummers": [
+        "06 22 54 32 50"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Rijschool Preuter/Era Eerste Rijssense Autorijschool",
+      "telefoonnummers": [
+        "0548 51 54 98",
+        "06 549 303 49"
+      ],
+      "emailadressen": [
+        "rijjschoolpreuter@live.nl"
+      ],
+      "websites": [],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Rijschool Raphael",
+      "telefoonnummers": [
+        "0619997618"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Rijschool Reichwein",
+      "telefoonnummers": [
+        "06 16 11 12 93"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Rijschool RIS",
+      "telefoonnummers": [
+        "06 29 37 49 74"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Rijschool Rotman",
+      "telefoonnummers": [
+        "0546 84 22 60",
+        "06 29 43 42 34"
+      ],
+      "emailadressen": [
+        "info@rijschoolrotman.nl"
+      ],
+      "websites": [
+        "http://www.rijschoolrotman.nl/"
+      ],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Rijschool Sanna",
+      "telefoonnummers": [
+        "0548 62 10 90",
+        "06 36 53 60 05"
+      ],
+      "emailadressen": [
+        "info@rijschoolsanna.nl"
+      ],
+      "websites": [],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Rijschool Stroeve",
+      "telefoonnummers": [
+        "0616191650"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Rijschool Tamara",
+      "telefoonnummers": [
+        "06 16 44 06 29"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Rijschool Theo Dijk",
+      "telefoonnummers": [
+        "06 49 21 57 95"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Rijschool Twenterand",
+      "telefoonnummers": [
+        "0653928809"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Rijschool van der Vinne",
+      "telefoonnummers": [
+        "052 326 55 21",
+        "06 55 91 89 95"
+      ],
+      "emailadressen": [
+        "info@rijschoolvandervinne.nl"
+      ],
+      "websites": [
+        "http://www.rijschoolvandervinne.nl/"
+      ],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Rijschool Wolters",
+      "telefoonnummers": [
+        "06 24 68 79 89"
+      ],
+      "emailadressen": [
+        "info@rijschoolwolters.nl"
+      ],
+      "websites": [
+        "https://www.rijschoolwolters.nl/"
+      ],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "rijschoolnuray.nl",
+      "telefoonnummers": [
+        "0622442036"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Rohof Verkeersopleidingen",
+      "telefoonnummers": [],
+      "emailadressen": [
+        "info@rohofverkeersopleidingen.nl"
+      ],
+      "websites": [],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Roosink Rij-instructie",
+      "telefoonnummers": [
+        "0548543507",
+        "0623613763"
+      ],
+      "emailadressen": [
+        "roosinkrijinstructie@gmail.com"
+      ],
+      "websites": [],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Saren",
+      "telefoonnummers": [],
+      "emailadressen": [
+        "sanenrijschool@gmail.com"
+      ],
+      "websites": [],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Sev 2 Drive",
+      "telefoonnummers": [],
+      "emailadressen": [
+        "sevkoeriersdiensten@gmail.com"
+      ],
+      "websites": [],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Shirak",
+      "telefoonnummers": [
+        "06 11 20 99 17"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Solestus Personeelsdiensten",
+      "telefoonnummers": [
+        "0570 781 010",
+        "06 29 43 25 08"
+      ],
+      "emailadressen": [
+        "opleidingen@solestus.com"
+      ],
+      "websites": [],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Talent Rijopleidingen",
+      "telefoonnummers": [
+        "06 28 46 64 42"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Tristan Kock Rijopleiding",
+      "telefoonnummers": [
+        "06 22 34 21 37"
+      ],
+      "emailadressen": [],
+      "websites": [
+        "http://www.tristankock.nl/"
+      ],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "V.O.F. \"HSR\" Henk Seppenwoolde Rij-Instructie",
+      "telefoonnummers": [
+        "0548 54 17 70"
+      ],
+      "emailadressen": [
+        "marianne.seppenwoolde@hetnet.nl"
+      ],
+      "websites": [],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Vechtdal Rijopleidingen B.V.",
+      "telefoonnummers": [
+        "06 21 25 37 79"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Verkeersschool Almelo",
+      "telefoonnummers": [
+        "06 46 83 09 89"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Verkeersschool Boensma",
+      "telefoonnummers": [
+        "074 3764 842"
+      ],
+      "emailadressen": [],
+      "websites": [
+        "http://www.boensma.eu/"
+      ],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Verkeersschool Brünen B.V.",
+      "telefoonnummers": [],
+      "emailadressen": [
+        "info@brunen.nl"
+      ],
+      "websites": [
+        "http://www.brunen.nl/"
+      ],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Verkeersschool Drive-Easy",
+      "telefoonnummers": [
+        "053 477 02 20",
+        "06 54 61 16 92"
+      ],
+      "emailadressen": [
+        "info@brunen.nl",
+        "info@drive-easy.nl"
+      ],
+      "websites": [
+        "http://www.brunen.nl/",
+        "http://www.drive-easy.nl/"
+      ],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Verkeersschool Kassem",
+      "telefoonnummers": [
+        "06 58 90 81 06"
+      ],
+      "emailadressen": [
+        "info@brunen.nl"
+      ],
+      "websites": [
+        "http://www.brunen.nl/"
+      ],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "Verkeersschool O O Den Haag",
+      "telefoonnummers": [
+        "650599957",
+        "626539919"
+      ],
+      "emailadressen": [
+        "info@brunen.nl"
+      ],
+      "websites": [
+        "http://www.brunen.nl/"
+      ],
+      "plaatsnaam": "Almelo"
+    },
+    {
+      "rijschool_naam": "\"Kaliteli\" Autorijschool",
+      "telefoonnummers": [
+        "06 54 98 07 87"
+      ],
+      "emailadressen": [
+        "eorhan@online.nl"
+      ],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "2RR",
+      "telefoonnummers": [
+        "06 452 396 88"
+      ],
+      "emailadressen": [
+        "2rralex@gmail.com"
+      ],
+      "websites": [
+        "http://www.2rr.nl/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "5-Skills",
+      "telefoonnummers": [
+        "020 2170 033",
+        "06 24 30 03 73"
+      ],
+      "emailadressen": [],
+      "websites": [
+        "http://www.rijschool5-skills.nl/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "A.R.S. Amsterdam Rijbewijs Service",
+      "telefoonnummers": [
+        "020 618 66 77",
+        "06 53 11 58 67"
+      ],
+      "emailadressen": [
+        "amsterdamrijbewijsservice@gmail.com"
+      ],
+      "websites": [
+        "http://www.amsterdamrijbewijsservice.nl/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "A1 Rijschool",
+      "telefoonnummers": [
+        "06 419 778 88"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "AAK-Rijopleidingen",
+      "telefoonnummers": [
+        "020 612 07 08"
+      ],
+      "emailadressen": [
+        "info@rijschoolaak.nl"
+      ],
+      "websites": [
+        "http://www.rijschoolaak.nl/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Ab Aznou",
+      "telefoonnummers": [
+        "06 226 681 84"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Alin rijschool",
+      "telefoonnummers": [
+        "0638403224"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Amstelectric",
+      "telefoonnummers": [
+        "0653528930"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Amsterdamse Verkeersopleidingen",
+      "telefoonnummers": [
+        "0202601300",
+        "0624745550"
+      ],
+      "emailadressen": [
+        "info@avoweb.nl"
+      ],
+      "websites": [
+        "http://www.avoweb.nl/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "ANWB rijopleiding Sprang & Tempo",
+      "telefoonnummers": [],
+      "emailadressen": [
+        "leiden@anwb-rijopleiding.nl"
+      ],
+      "websites": [
+        "http://www.anwb-rijopleiding.nl/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Atlas Rijschoolmakelaar",
+      "telefoonnummers": [
+        "06 34 86 02 01"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Auto- en Motorrijschool Caland",
+      "telefoonnummers": [
+        "020 785 5743",
+        "06 54 93 32 23"
+      ],
+      "emailadressen": [
+        "info@rijschoolcaland.nl"
+      ],
+      "websites": [
+        "http://www.rijschoolcaland.nl/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Auto- en Motorrijschool Hippe Amstelveen",
+      "telefoonnummers": [],
+      "emailadressen": [
+        "info@hippe-amstelveen.nl"
+      ],
+      "websites": [
+        "http://www.hippe-amstelveen.nl/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Auto- en motorrijschool Proficiat",
+      "telefoonnummers": [
+        "023 526 05 30",
+        "06 84 89 05 15"
+      ],
+      "emailadressen": [
+        "info@rijschoolproficiat.nl"
+      ],
+      "websites": [
+        "http://www.rijschoolproficiat.nl/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Auto- en motorrijschool www.rvv.nl",
+      "telefoonnummers": [
+        "06 54 77 07 70"
+      ],
+      "emailadressen": [
+        "ik-wil-rijles@rvv.nl"
+      ],
+      "websites": [
+        "http://www.rvv.nl/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Auto-Rijschool V. En S.",
+      "telefoonnummers": [],
+      "emailadressen": [
+        "info@rijschoolvs.nl"
+      ],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "automaatrijschool",
+      "telefoonnummers": [],
+      "emailadressen": [
+        "info@automaatrijschool.nl"
+      ],
+      "websites": [
+        "http://www.automaatrijschool.nl/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Autorijschool \"AIDA\"",
+      "telefoonnummers": [
+        "020 363 71 86",
+        "06 55 34 52 82"
+      ],
+      "emailadressen": [
+        "info@rijschoolaida.nl"
+      ],
+      "websites": [
+        "http://www.rijschoolaida.nl/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Autorijschool \"Mir\"",
+      "telefoonnummers": [
+        "06 24 15 67 48",
+        "036 548 93 39"
+      ],
+      "emailadressen": [
+        "c.jorguseski@chello.nl"
+      ],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Autorijschool \"Motivatie\"",
+      "telefoonnummers": [
+        "06 53 12 11 61"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Autorijschool \"Succes II\"",
+      "telefoonnummers": [
+        "0625 09 88 82"
+      ],
+      "emailadressen": [],
+      "websites": [
+        "http://www.rijschoolsucces.nl/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Autorijschool 10",
+      "telefoonnummers": [
+        "0654973007"
+      ],
+      "emailadressen": [],
+      "websites": [
+        "http://www.autorijschool10.nl/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Autorijschool 5 Sterren",
+      "telefoonnummers": [],
+      "emailadressen": [
+        "info@rijschool5sterren.nl"
+      ],
+      "websites": [
+        "http://www.rijschool5sterren.nl/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Autorijschool A10",
+      "telefoonnummers": [
+        "020 412 43 54",
+        "06 53 75 96 17"
+      ],
+      "emailadressen": [
+        "info@rijschoola10.nl"
+      ],
+      "websites": [
+        "http://www.rijschoola10.nl/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Autorijschool Admiraal",
+      "telefoonnummers": [
+        "020 688 11 42",
+        "06 14 11 49 51"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Autorijschool Aha",
+      "telefoonnummers": [
+        "06 51 71 78 04"
+      ],
+      "emailadressen": [
+        "info@autorijschoolaha.nl"
+      ],
+      "websites": [
+        "http://www.autorijschoolaha.nl/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Autorijschool Amrit",
+      "telefoonnummers": [
+        "020 615 39 02",
+        "06 54 68 30 25"
+      ],
+      "emailadressen": [
+        "rijschoolamrit@live.nl"
+      ],
+      "websites": [
+        "http://www.amrit.nl/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Autorijschool Anass",
+      "telefoonnummers": [
+        "06 27 39 97 59",
+        "020 636 10 77"
+      ],
+      "emailadressen": [
+        "zanzen@hotmail.nl"
+      ],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Autorijschool Aras tevens handelend onder de naam freshdrive",
+      "telefoonnummers": [
+        "06 54 24 75 62"
+      ],
+      "emailadressen": [],
+      "websites": [
+        "http://www.autorijschoolaras.nl/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Autorijschool Ayana",
+      "telefoonnummers": [],
+      "emailadressen": [
+        "info@autorijschoolayana.nl"
+      ],
+      "websites": [
+        "https://www.autorijschoolayana.nl/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Autorijschool Aznag",
+      "telefoonnummers": [
+        "06 27 50 26 04"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Autorijschool Bani",
+      "telefoonnummers": [
+        "023 564 09 45",
+        "06 12 25 92 03"
+      ],
+      "emailadressen": [
+        "j.bani@quicknet.nl"
+      ],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Autorijschool Budget",
+      "telefoonnummers": [
+        "020 686 89 47",
+        "06 42 21 10 91"
+      ],
+      "emailadressen": [
+        "abid.b@hotmail.com"
+      ],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Autorijschool Carlito",
+      "telefoonnummers": [
+        "0654368709"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Autorijschool Ce-Li",
+      "telefoonnummers": [
+        "06 34 96 80 03"
+      ],
+      "emailadressen": [],
+      "websites": [
+        "http://www.ce-li.com/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Autorijschool Center",
+      "telefoonnummers": [
+        "06 275 780 49"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Autorijschool Cetin",
+      "telefoonnummers": [
+        "06 14 45 73 75"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Autorijschool Claessen",
+      "telefoonnummers": [
+        "206964295",
+        "653644241"
+      ],
+      "emailadressen": [
+        "daclaessen@hotmail.com"
+      ],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Autorijschool Compaqt",
+      "telefoonnummers": [
+        "0642837579"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Autorijschool Dakar",
+      "telefoonnummers": [
+        "0297 34 28 63",
+        "06 30 37 54 61"
+      ],
+      "emailadressen": [
+        "info@rijschooldakar.nl"
+      ],
+      "websites": [
+        "http://www.rijschooldakar.nl/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Autorijschool de Keerkring",
+      "telefoonnummers": [
+        "0653774633"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Autorijschool De Poort",
+      "telefoonnummers": [
+        "206959822",
+        "06 26 04 40 57"
+      ],
+      "emailadressen": [],
+      "websites": [
+        "http://www.rijschooldepoort.nl/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Autorijschool De Ring",
+      "telefoonnummers": [
+        "06 19 31 03 59"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Autorijschool Drive Fresh",
+      "telefoonnummers": [
+        "06 16 78 06 56"
+      ],
+      "emailadressen": [
+        "drivefresh@live.nl"
+      ],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Autorijschool Drive Point",
+      "telefoonnummers": [
+        "06 24 77 30 13"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Autorijschool Ed Smit",
+      "telefoonnummers": [
+        "036 751 80 20",
+        "06 39 76 34 36"
+      ],
+      "emailadressen": [
+        "ed.smit@lesgo.nl"
+      ],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Autorijschool EDIN",
+      "telefoonnummers": [
+        "06 14 91 51 37"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Autorijschool Elderhorst",
+      "telefoonnummers": [
+        "023 562 06 46",
+        "06 22 34 01 57"
+      ],
+      "emailadressen": [
+        "ronaldelderhorst@hotmail.nl"
+      ],
+      "websites": [
+        "http://www.autorijschoolelderhorst.nl/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Autorijschool Erkan",
+      "telefoonnummers": [
+        "020 693 14 53",
+        "06 14 49 62 04"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Autorijschool Excellent",
+      "telefoonnummers": [
+        "020 773 58 47",
+        "06 54 39 31 02"
+      ],
+      "emailadressen": [
+        "sabinasolmaz@gmail.com"
+      ],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Autorijschool F. Van Gulik",
+      "telefoonnummers": [
+        "020 631 47 57"
+      ],
+      "emailadressen": [
+        "FVANGULIK@PLANET.NL"
+      ],
+      "websites": [
+        "http://www.rijschoolvangulik.nl/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Autorijschool Gülay Kayaalp",
+      "telefoonnummers": [
+        "020 631 47 57",
+        "020 668 28 79",
+        "06 50 22 89 08"
+      ],
+      "emailadressen": [
+        "FVANGULIK@PLANET.NL"
+      ],
+      "websites": [
+        "http://www.rijschoolvangulik.nl/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Autorijschool Hasan",
+      "telefoonnummers": [
+        "020 631 47 57",
+        "020 776 21 13",
+        "06 51 09 67 63"
+      ],
+      "emailadressen": [
+        "FVANGULIK@PLANET.NL",
+        "trabzonsporboy@hotmail.com"
+      ],
+      "websites": [
+        "http://www.rijschoolvangulik.nl/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Autorijschool Het Nieuwe Rijden",
+      "telefoonnummers": [
+        "020 631 47 57"
+      ],
+      "emailadressen": [
+        "FVANGULIK@PLANET.NL",
+        "nicky_tra@hotmail.com"
+      ],
+      "websites": [
+        "http://www.rijschoolvangulik.nl/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Autorijschool Het Noorden",
+      "telefoonnummers": [
+        "020 631 47 57",
+        "06 83 60 70 61"
+      ],
+      "emailadressen": [
+        "FVANGULIK@PLANET.NL"
+      ],
+      "websites": [
+        "http://www.rijschoolvangulik.nl/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Autorijschool Ishak",
+      "telefoonnummers": [
+        "020 631 47 57",
+        "020 694 61 72",
+        "06 50 44 55 62"
+      ],
+      "emailadressen": [
+        "FVANGULIK@PLANET.NL",
+        "e.m.ishak@gmail.com"
+      ],
+      "websites": [
+        "http://www.rijschoolvangulik.nl/",
+        "http://www.ed-ishak.nl/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Rijschool Shami",
+      "telefoonnummers": [
+        "020 631 47 57",
+        "020 694 61 72",
+        "06 50 44 55 62"
+      ],
+      "emailadressen": [
+        "FVANGULIK@PLANET.NL",
+        "e.m.ishak@gmail.com",
+        "Shami@hotmail.nl"
+      ],
+      "websites": [
+        "http://www.rijschoolvangulik.nl/",
+        "http://www.ed-ishak.nl/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Rijschool Sharety",
+      "telefoonnummers": [
+        "020 694 61 72",
+        "06 50 44 55 62",
+        "0621413382"
+      ],
+      "emailadressen": [
+        "e.m.ishak@gmail.com",
+        "Shami@hotmail.nl"
+      ],
+      "websites": [
+        "http://www.ed-ishak.nl/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Rijschool Silvia",
+      "telefoonnummers": [
+        "0621413382",
+        "06 11 23 40 27"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Rijschool Skyline Nora",
+      "telefoonnummers": [
+        "06 41 95 33 94"
+      ],
+      "emailadressen": [
+        "drivera101@hotmail.com"
+      ],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Rijschool SMI Drive",
+      "telefoonnummers": [
+        "0648461786"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Rijschool Snel Op Weg",
+      "telefoonnummers": [
+        "0651108880"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Rijschool Spencer",
+      "telefoonnummers": [
+        "06 12 50 28 25"
+      ],
+      "emailadressen": [
+        "info@rijschoolspencer.nl"
+      ],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Rijschool STORMROXY",
+      "telefoonnummers": [
+        "06 41 43 14 96",
+        "06 52 72 22 34"
+      ],
+      "emailadressen": [],
+      "websites": [
+        "http://www.stormroxy.nl/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Rijschool Strijder",
+      "telefoonnummers": [
+        "0655461368"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Rijschool Stuivenvolt",
+      "telefoonnummers": [],
+      "emailadressen": [
+        "INFO@STUIVENVOLT.NL"
+      ],
+      "websites": [
+        "http://www.stuivenvolt.nl/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Rijschool Succes",
+      "telefoonnummers": [
+        "06 11 18 27 09"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Rijschool Taktiek",
+      "telefoonnummers": [
+        "06 55 36 62 09"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Rijschool The Graduate",
+      "telefoonnummers": [
+        "06 57 55 41 83"
+      ],
+      "emailadressen": [],
+      "websites": [
+        "https://rijschoolgraduate.nl/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Rijschool Tijger",
+      "telefoonnummers": [
+        "06 43 58 37 30"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Rijschool Today",
+      "telefoonnummers": [
+        "0653109210"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Rijschool Ton de Haan",
+      "telefoonnummers": [
+        "06 22 41 38 15",
+        "0294 286521"
+      ],
+      "emailadressen": [
+        "info@tondehaan.nl"
+      ],
+      "websites": [
+        "http://www.tondehaan.nl/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Rijschool Top",
+      "telefoonnummers": [
+        "06 42 20 63 22"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Rijschool Topscore",
+      "telefoonnummers": [
+        "06 19 99 95 14"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Rijschool Traffic expert",
+      "telefoonnummers": [
+        "0640166070"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Rijschool transparant",
+      "telefoonnummers": [
+        "06 24 54 46 99"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Rijschool Tubee",
+      "telefoonnummers": [
+        "06 11 78 86 60"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Rijschool Tugra",
+      "telefoonnummers": [
+        "06 50 97 11 24"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Rijschool uLes",
+      "telefoonnummers": [
+        "06 83 06 12 70"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Rijschool United",
+      "telefoonnummers": [
+        "0638991727"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Rijschool van Amsterdam",
+      "telefoonnummers": [
+        "06 39 20 88 45"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Rijschool van Hees",
+      "telefoonnummers": [
+        "075 616 51 29",
+        "0653994887"
+      ],
+      "emailadressen": [
+        "info@rijschoolvanhees.nl"
+      ],
+      "websites": [
+        "http://www.rijschoolvanhees.nl/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Rijschool Versnelling",
+      "telefoonnummers": [
+        "06 48 58 71 00"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Rijschool Victory",
+      "telefoonnummers": [
+        "06 24 68 82 48"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Rijschool Vitto",
+      "telefoonnummers": [
+        "06 48 72 27 11"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Rijschool VVR",
+      "telefoonnummers": [
+        "0616177298"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Rijschool We Drive",
+      "telefoonnummers": [
+        "06 13 30 01 09"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Rijschool Westeinder",
+      "telefoonnummers": [
+        "06 44 60 03 53"
+      ],
+      "emailadressen": [],
+      "websites": [
+        "http://www.rijschoolwesteinder.nl/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Rijschool White Way Akyol",
+      "telefoonnummers": [
+        "06 14 88 25 33",
+        "06 41 36 82 25"
+      ],
+      "emailadressen": [
+        "info@whiteway.nl"
+      ],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Rijschool Y-Drive",
+      "telefoonnummers": [
+        "06 19 63 40 81"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Rijschool Young Stars",
+      "telefoonnummers": [
+        "06 17 43 58 32"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Rijschool Zaheera",
+      "telefoonnummers": [
+        "06 27 84 24 85"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Rijschool Zero",
+      "telefoonnummers": [
+        "06 14 88 15 04"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Rijschool Zomer",
+      "telefoonnummers": [
+        "06 22 22 86 02"
+      ],
+      "emailadressen": [],
+      "websites": [
+        "https://www.rijschoolzomer.nl/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Rijschool Zuid",
+      "telefoonnummers": [
+        "06 52 47 24 57"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Rijschool Ötje",
+      "telefoonnummers": [
+        "06 25 57 42 23"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Rijschool-OK",
+      "telefoonnummers": [
+        "06 26 47 07 29"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "rijschoolkruising.nl",
+      "telefoonnummers": [
+        "06 25 51 14 31"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Rijskula",
+      "telefoonnummers": [
+        "088 877 6655",
+        "06 15 55 25 51"
+      ],
+      "emailadressen": [
+        "hello@rijskula.nl"
+      ],
+      "websites": [
+        "https://rijskula.nl/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Rijspot.nl",
+      "telefoonnummers": [
+        "06 40 86 81 03"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Rijvaardig",
+      "telefoonnummers": [
+        "0610054008"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Roadkingz",
+      "telefoonnummers": [
+        "06 83 11 37 50"
+      ],
+      "emailadressen": [],
+      "websites": [
+        "https://roadkingz.nl/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Roadwings",
+      "telefoonnummers": [
+        "0655500014"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Roman Autorijschool",
+      "telefoonnummers": [
+        "06 47 18 10 10"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "RomeoDrive",
+      "telefoonnummers": [
+        "06 11 17 79 92"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Ronchetti Verkeersopleidingen",
+      "telefoonnummers": [],
+      "emailadressen": [
+        "info@ronchetti.nl"
+      ],
+      "websites": [
+        "http://www.ronchetti.nl/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "ronmaij.nl",
+      "telefoonnummers": [
+        "06 14 99 22 31"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Route-020",
+      "telefoonnummers": [
+        "686231992"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Ryles",
+      "telefoonnummers": [
+        "085 124 8688",
+        "06 48 03 21 42"
+      ],
+      "emailadressen": [],
+      "websites": [
+        "https://www.ryles.nl/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Ryschool",
+      "telefoonnummers": [
+        "06 81 43 72 44"
+      ],
+      "emailadressen": [],
+      "websites": [
+        "http://rijschool.nl/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "S. Mahes-Prithipalsingh",
+      "telefoonnummers": [
+        "020 683 68 15",
+        "06 14 79 29 50"
+      ],
+      "emailadressen": [
+        "info@rijschoolmahes.nl"
+      ],
+      "websites": [
+        "http://www.rijschoolmahes.nl/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Saendrive",
+      "telefoonnummers": [
+        "06 31 64 06 65"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Safe Drivers",
+      "telefoonnummers": [
+        "0684160984"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Safe Wheels",
+      "telefoonnummers": [
+        "0646175617"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "SafeLes",
+      "telefoonnummers": [
+        "020 786 07 78"
+      ],
+      "emailadressen": [
+        "info@safeles.nl"
+      ],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Samen Slagen",
+      "telefoonnummers": [
+        "0630382652"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Save Rijopleiding",
+      "telefoonnummers": [
+        "06 26 06 64 58"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Selma Rijschool Melek",
+      "telefoonnummers": [],
+      "emailadressen": [
+        "selma-tepe@hotmail.com"
+      ],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "SH Gabriël",
+      "telefoonnummers": [
+        "06 17 04 87 81"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Simpelrijles.nl",
+      "telefoonnummers": [
+        "06 50 66 50 16"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Smiet Rijopleidingen",
+      "telefoonnummers": [
+        "06 43 43 06 96"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "SNEL Autorijschool",
+      "telefoonnummers": [
+        "0641725635"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Sodrive Rijopleidingen B.V.",
+      "telefoonnummers": [],
+      "emailadressen": [
+        "info@sodrive.nl"
+      ],
+      "websites": [
+        "http://www.sodrive.nl/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Spoed Examen Centrum Nederland",
+      "telefoonnummers": [
+        "06 21 95 19 72"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Spoed Rijles Amsterdam",
+      "telefoonnummers": [
+        "06 38 11 51 11"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Start Autorijschool",
+      "telefoonnummers": [
+        "06 27 39 41 79"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Startnu Rijopleiding",
+      "telefoonnummers": [
+        "075 750 68 87",
+        "06 24 40 05 15"
+      ],
+      "emailadressen": [
+        "info@startnurijopleiding.nl"
+      ],
+      "websites": [
+        "http://www.startnurijopleiding.nl/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Super Rijles",
+      "telefoonnummers": [
+        "0642898782"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Theoriecentrum De Komeet",
+      "telefoonnummers": [],
+      "emailadressen": [
+        "info@theoriecentrumkomeet.nl"
+      ],
+      "websites": [
+        "http://www.theoriecentrumkomeet.nl/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Tola Autorijschool",
+      "telefoonnummers": [
+        "06 219 530 22"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Tom de Keizer",
+      "telefoonnummers": [
+        "075 631 05 00",
+        "06 53 50 30 30"
+      ],
+      "emailadressen": [
+        "info@tomdekeizer.nl"
+      ],
+      "websites": [
+        "http://www.tomdekeizer.nl/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Top-Drive",
+      "telefoonnummers": [
+        "085 064 78 68",
+        "06 11 36 00 20"
+      ],
+      "emailadressen": [
+        "info@top-drive.nl"
+      ],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Toprijbewijs B.V.",
+      "telefoonnummers": [
+        "06 39 43 53 73"
+      ],
+      "emailadressen": [
+        "info@toprijbewijs.nl"
+      ],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Traffic talent",
+      "telefoonnummers": [],
+      "emailadressen": [],
+      "websites": [
+        "http://leafletjs.com/",
+        "https://www.kadaster.nl/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Universal Drive",
+      "telefoonnummers": [
+        "06 16 75 28 32",
+        "06 15 23 02 22"
+      ],
+      "emailadressen": [
+        "info@universaldrive.nl"
+      ],
+      "websites": [
+        "https://universaldrive.nl/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "V.O.F. Auto/Motorrijschool van Egmond",
+      "telefoonnummers": [],
+      "emailadressen": [
+        "rijschoolvanegmond@live.nl"
+      ],
+      "websites": [
+        "http://www.rijschoolvanegmond.nl/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "van AM naar B",
+      "telefoonnummers": [
+        "06 143 480 04"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "VDR Verkeersopleidingen",
+      "telefoonnummers": [
+        "023 561 17 90",
+        "06 24 58 38 19"
+      ],
+      "emailadressen": [
+        "info@vdrverkeersopleidingen.nl"
+      ],
+      "websites": [
+        "http://www.vdrverkeersopleidingen.nl/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Verkeerschool Zoef",
+      "telefoonnummers": [
+        "0641260330"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Verkeerscollege.com",
+      "telefoonnummers": [
+        "0297 25 06 38",
+        "06 20 60 83 33"
+      ],
+      "emailadressen": [
+        "info@verkeerscollege.com"
+      ],
+      "websites": [
+        "http://www.verkeerscollege.com/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Verkeersschool B Boogaard",
+      "telefoonnummers": [
+        "06 41 28 63 85"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Verkeersschool Dal",
+      "telefoonnummers": [
+        "06 39 50 52 95"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Verkeersschool Drive A car",
+      "telefoonnummers": [
+        "0639190643"
+      ],
+      "emailadressen": [
+        "info@driveacar.nl"
+      ],
+      "websites": [
+        "https://www.driveacar.nl/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Verkeersschool FREANK",
+      "telefoonnummers": [
+        "06 38 30 56 34"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Verkeersschool Hugs",
+      "telefoonnummers": [
+        "06 41 95 53 18"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Verkeersschool i-motor",
+      "telefoonnummers": [
+        "06 38 90 44 88",
+        "06 41 17 72 85"
+      ],
+      "emailadressen": [],
+      "websites": [
+        "http://www.i-motor.nl/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Verkeersschool Keep on driving",
+      "telefoonnummers": [
+        "0619234488"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Verkeersschool Kennedy",
+      "telefoonnummers": [
+        "06 20 96 21 61"
+      ],
+      "emailadressen": [],
+      "websites": [
+        "https://verkeersschoolkennedy.nl/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Verkeersschool Kharmich",
+      "telefoonnummers": [
+        "06 14 99 80 89"
+      ],
+      "emailadressen": [],
+      "websites": [
+        "http://www.kharmichgroup.nl/"
+      ],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Verkeersschool Ladiesway",
+      "telefoonnummers": [
+        "06 19 00 73 40"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Verkeersschool M&M",
+      "telefoonnummers": [
+        "020 614 69 60",
+        "06 53 14 67 82"
+      ],
+      "emailadressen": [
+        "mustafa73@live.nl"
+      ],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Verkeersschool Maryam",
+      "telefoonnummers": [
+        "06 34 56 67 33"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "Verkeersschool My Way",
+      "telefoonnummers": [],
+      "emailadressen": [
+        "info@verkeersschoolmyway.nl"
+      ],
+      "websites": [],
+      "plaatsnaam": "Amsterdam"
+    },
+    {
+      "rijschool_naam": "A. Othman, t.h.o.d.n. Auto- en motorrijschool Quality",
+      "telefoonnummers": [
+        "0722 340 100",
+        "06 46 72 24 66"
+      ],
+      "emailadressen": [],
+      "websites": [
+        "http://www.rijquality.nl/"
+      ],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Autorijschool \"Adam En Eva\"",
+      "telefoonnummers": [
+        "072 571 58 71",
+        "06 53 50 11 17"
+      ],
+      "emailadressen": [
+        "info@verkeersschooladam-eva.nl"
+      ],
+      "websites": [
+        "http://www.adam-eva.nl/"
+      ],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Autorijschool \"AIDA\"",
+      "telefoonnummers": [
+        "020 363 71 86",
+        "06 55 34 52 82"
+      ],
+      "emailadressen": [
+        "info@rijschoolaida.nl"
+      ],
+      "websites": [
+        "http://www.rijschoolaida.nl/"
+      ],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool \"Dennis\"",
+      "telefoonnummers": [
+        "0251 31 21 17",
+        "06 44 33 03 54"
+      ],
+      "emailadressen": [
+        "info@rijschooldennis.nl"
+      ],
+      "websites": [
+        "http://www.rijschooldennis.nl/"
+      ],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool ALFABET",
+      "telefoonnummers": [
+        "06 12 20 00 24"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool Alphenaar",
+      "telefoonnummers": [
+        "023 751 63 25",
+        "06 10 84 89 43"
+      ],
+      "emailadressen": [
+        "info@rijschoolalphenaar.nl"
+      ],
+      "websites": [
+        "http://www.alphenaar.ws/"
+      ],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool Amalia",
+      "telefoonnummers": [
+        "0633031004"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool Ayaz",
+      "telefoonnummers": [
+        "0638327874"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool Bergen",
+      "telefoonnummers": [
+        "06 24 20 61 87"
+      ],
+      "emailadressen": [],
+      "websites": [
+        "http://www.rijschoolbergen.nl/"
+      ],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool BiMa",
+      "telefoonnummers": [],
+      "emailadressen": [
+        "info@rijschoolbima.com"
+      ],
+      "websites": [
+        "https://www.rijschool-bima.nl/"
+      ],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool Boemerang",
+      "telefoonnummers": [
+        "0611123734"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool BOUL",
+      "telefoonnummers": [
+        "0642286032"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool Broekpolder",
+      "telefoonnummers": [
+        "06 16 07 54 27"
+      ],
+      "emailadressen": [],
+      "websites": [
+        "https://rijschoolbroekpolder.nl/"
+      ],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool By Lies",
+      "telefoonnummers": [
+        "0613524883"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "rijschool castricum",
+      "telefoonnummers": [
+        "0642724253"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool Daalmeer",
+      "telefoonnummers": [
+        "06 11 73 27 47"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool Damsko",
+      "telefoonnummers": [],
+      "emailadressen": [],
+      "websites": [
+        "http://leafletjs.com/",
+        "https://www.kadaster.nl/"
+      ],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool De Broers",
+      "telefoonnummers": [],
+      "emailadressen": [
+        "Info@rijschooldebroers.nl"
+      ],
+      "websites": [
+        "https://rijschooldebroers.nl/"
+      ],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool de Bruijn",
+      "telefoonnummers": [
+        "0681161131"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "RIJSCHOOL DE DRAAI",
+      "telefoonnummers": [
+        "06 21 92 14 06"
+      ],
+      "emailadressen": [],
+      "websites": [
+        "https://www.rijschooldedraai.nl/"
+      ],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool De Mike Drive",
+      "telefoonnummers": [
+        "0622172007"
+      ],
+      "emailadressen": [],
+      "websites": [
+        "https://rijschooldemikedrive.nl/"
+      ],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool De Overbuurman",
+      "telefoonnummers": [
+        "0613797098"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool de Winter",
+      "telefoonnummers": [
+        "06 11 58 29 79"
+      ],
+      "emailadressen": [],
+      "websites": [
+        "http://www.rijschooldewinter.nl/"
+      ],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool Delfin VOF",
+      "telefoonnummers": [
+        "085 401 29 55",
+        "06 34 73 66 67"
+      ],
+      "emailadressen": [
+        "info@rijschooldelfin.nl"
+      ],
+      "websites": [],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool Dinie",
+      "telefoonnummers": [
+        "0251 25 34 12",
+        "06 46 91 68 85"
+      ],
+      "emailadressen": [
+        "info@rijschooldinie.nl"
+      ],
+      "websites": [],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool Dirkje Bons t.h.o.d.n. LesGo",
+      "telefoonnummers": [
+        "06 57 94 07 87"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool Driva",
+      "telefoonnummers": [],
+      "emailadressen": [],
+      "websites": [
+        "http://leafletjs.com/",
+        "https://www.kadaster.nl/"
+      ],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool Easy Start",
+      "telefoonnummers": [
+        "085 773 24 34",
+        "06 53 29 61 38"
+      ],
+      "emailadressen": [],
+      "websites": [
+        "http://www.autorijschool-jansen.nl/"
+      ],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool ebb",
+      "telefoonnummers": [
+        "06 83 21 19 56"
+      ],
+      "emailadressen": [],
+      "websites": [
+        "http://www.rijschoolroyalty.nl/"
+      ],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool Emre",
+      "telefoonnummers": [
+        "06 85 47 44 03"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool Enroute",
+      "telefoonnummers": [
+        "06 20 70 15 52"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool Erwin de Wit",
+      "telefoonnummers": [
+        "06 31 00 29 91"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool First Gear",
+      "telefoonnummers": [
+        "06 29 36 17 63"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool Fly & Drive",
+      "telefoonnummers": [
+        "0229844350",
+        "0631778669"
+      ],
+      "emailadressen": [
+        "info@rijschoolflydrive.nl"
+      ],
+      "websites": [],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool For You",
+      "telefoonnummers": [
+        "072 571 86 61",
+        "06 29 09 70 17"
+      ],
+      "emailadressen": [
+        "info@rijschoolforyou.nl"
+      ],
+      "websites": [
+        "http://www.rijschoolforyou.nl/"
+      ],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool Gears",
+      "telefoonnummers": [
+        "06 83 96 62 70"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool Grootfaam",
+      "telefoonnummers": [
+        "0634457958"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool Harma",
+      "telefoonnummers": [
+        "06 15 10 35 21"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool Heemskerk",
+      "telefoonnummers": [
+        "025182 94 65",
+        "06 48 95 94 55"
+      ],
+      "emailadressen": [
+        "info@rijschoolheemskerk.nl"
+      ],
+      "websites": [
+        "http://www.rijschoolheemskerk.nl/"
+      ],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool Heerhugowaard",
+      "telefoonnummers": [
+        "072 879 56 56",
+        "06 24 75 86 56"
+      ],
+      "emailadressen": [
+        "info@rijschool-heerhugowaard.nl"
+      ],
+      "websites": [],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool Het Groene Licht",
+      "telefoonnummers": [
+        "06 45 73 23 49"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool Ibroos",
+      "telefoonnummers": [
+        "0636390788"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool Iceway",
+      "telefoonnummers": [
+        "06 187 26 51 40"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool Ingmar",
+      "telefoonnummers": [
+        "0654968579"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool InterFocus",
+      "telefoonnummers": [
+        "023 561 19 78",
+        "06 24 92 98 82"
+      ],
+      "emailadressen": [
+        "mike@interfocusrijschool.nl"
+      ],
+      "websites": [],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool Jacqueline",
+      "telefoonnummers": [
+        "06 29 14 69 88"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool jet",
+      "telefoonnummers": [
+        "06 26 11 70 50"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool Johan Doeleman",
+      "telefoonnummers": [
+        "06 52 68 91 44"
+      ],
+      "emailadressen": [],
+      "websites": [
+        "http://www.rijschooljohandoeleman.nl/"
+      ],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool Jopie",
+      "telefoonnummers": [
+        "06 45 05 24 20"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool Kaizen",
+      "telefoonnummers": [
+        "0645095184"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool Kras-F. Kruse",
+      "telefoonnummers": [
+        "0251 65 54 48",
+        "06 53 12 07 33"
+      ],
+      "emailadressen": [
+        "rijschoolkras@casema.nl"
+      ],
+      "websites": [],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool Krijnsen",
+      "telefoonnummers": [
+        "0226 72 22 02",
+        "06 47 66 44 87"
+      ],
+      "emailadressen": [
+        "info@rijschoolkrijnsen.nl"
+      ],
+      "websites": [
+        "http://www.rijschoolkrijnsen.nl/"
+      ],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool L. Buis",
+      "telefoonnummers": [
+        "020 685 31 00",
+        "020 683 31 02"
+      ],
+      "emailadressen": [
+        "info@rijschoolbuis.nl"
+      ],
+      "websites": [],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool Ladee",
+      "telefoonnummers": [
+        "0619388743"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool Leensen",
+      "telefoonnummers": [
+        "06 13 38 29 92"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool Lesonderweg",
+      "telefoonnummers": [
+        "0638901275"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool Linda Haijtsma",
+      "telefoonnummers": [
+        "0613128023"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool M&L",
+      "telefoonnummers": [
+        "06 51 11 08 53"
+      ],
+      "emailadressen": [],
+      "websites": [
+        "http://www.rijschoolml.nl/"
+      ],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool MagiX",
+      "telefoonnummers": [
+        "06 83 20 21 04"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool MARHABA",
+      "telefoonnummers": [
+        "020 893 84 37",
+        "06 23 23 40 60"
+      ],
+      "emailadressen": [
+        "ars.marhaba@live.nl"
+      ],
+      "websites": [],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool Meesterlijk",
+      "telefoonnummers": [
+        "06 53 41 72 94"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool Metin",
+      "telefoonnummers": [
+        "023 549 16 59",
+        "06 43 05 20 29"
+      ],
+      "emailadressen": [
+        "dudu-kilic@hotmail.com"
+      ],
+      "websites": [
+        "https://rijschoolmetin.nl/"
+      ],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool My Way",
+      "telefoonnummers": [
+        "06 54 34 45 39"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool NedNam",
+      "telefoonnummers": [
+        "06 81 18 75 57"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool Nemo",
+      "telefoonnummers": [
+        "0615023990",
+        "0641480751"
+      ],
+      "emailadressen": [],
+      "websites": [
+        "https://rijschoolnemo.nl/"
+      ],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "rijschool oosthuizen",
+      "telefoonnummers": [
+        "06 25 49 81 37"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool Oppertopper",
+      "telefoonnummers": [
+        "06 27 82 21 80"
+      ],
+      "emailadressen": [],
+      "websites": [
+        "http://www.rijschooloppertopper.nl/"
+      ],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool Oran",
+      "telefoonnummers": [
+        "06 10 82 37 10"
+      ],
+      "emailadressen": [],
+      "websites": [
+        "http://www.rijschooloran.nl/"
+      ],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool Pieter",
+      "telefoonnummers": [
+        "0224 75 24 54",
+        "06 46 28 85 22"
+      ],
+      "emailadressen": [
+        "info@rijschool-pieter.nl"
+      ],
+      "websites": [],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool Professor",
+      "telefoonnummers": [
+        "06 41 79 39 94"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool Re-Laxed",
+      "telefoonnummers": [],
+      "emailadressen": [],
+      "websites": [
+        "http://leafletjs.com/",
+        "https://www.kadaster.nl/"
+      ],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool Rehan",
+      "telefoonnummers": [
+        "648669956"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool Rem",
+      "telefoonnummers": [
+        "06 83 62 25 96"
+      ],
+      "emailadressen": [],
+      "websites": [
+        "https://rijschoolrem.nl/"
+      ],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool Rich",
+      "telefoonnummers": [
+        "06 25 05 56 83"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool Rick",
+      "telefoonnummers": [
+        "0224 745 655"
+      ],
+      "emailadressen": [
+        "info@rijschoolrick.nl"
+      ],
+      "websites": [],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool rij automaat",
+      "telefoonnummers": [
+        "0629424622"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool Rij-Nova",
+      "telefoonnummers": [
+        "0643944782"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool Rijles Op Maat",
+      "telefoonnummers": [
+        "0619352720"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool RIJZO",
+      "telefoonnummers": [],
+      "emailadressen": [
+        "rijschoolrijzo@gmail.com"
+      ],
+      "websites": [
+        "http://www.rijzo.nl/"
+      ],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool Rimo",
+      "telefoonnummers": [
+        "06 48 59 88 09"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool Rio",
+      "telefoonnummers": [
+        "06 15 29 71 30"
+      ],
+      "emailadressen": [],
+      "websites": [],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool Rito",
+      "telefoonnummers": [
+        "0633653838"
+      ],
+      "emailadressen": [],
+      "websites": [
+        "http://www.rijschoolrito.nl/"
+      ],
+      "plaatsnaam": "Bergen Op Zoom"
+    },
+    {
+      "rijschool_naam": "Rijschool Rosanne Kingma",
+      "telefoonnummers": [
+        "06 12 29 47 48"
+      ],
+      "emailadressen": [],
+      "websites": [
+        "http://www.rijschoolrosannekingma.nl/"
+      ],
+      "plaatsnaam": "Bergen Op Zoom"
+    }
+  ]
+}

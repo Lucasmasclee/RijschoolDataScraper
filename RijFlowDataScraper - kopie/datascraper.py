@@ -722,14 +722,14 @@ def start_datascraper(driver):
             'verzamelde_data': alle_rijscholen_data
         }
         
-        with open('rijscholen_data.json', 'w', encoding='utf-8') as file:
-            json.dump(output_data, file, ensure_ascii=False, indent=2)
+        # with open('rijscholen_data.json', 'w', encoding='utf-8') as file:
+        #     json.dump(output_data, file, ensure_ascii=False, indent=2)
         
-        print(f"✅ Alle gegevens opgeslagen in 'rijscholen_data.json'")
-        print(f"📊 Totaal verzameld: {len(alle_rijscholen_data)} rijschoolgegevens")
+        # print(f"✅ Alle gegevens opgeslagen in 'rijscholen_data.json'")
+        # print(f"📊 Totaal verzameld: {len(alle_rijscholen_data)} rijschoolgegevens")
         
-        print(f"\n🎯 Data scraping voltooid voor alle {len(plaatsnamen)} plaatsen!")
-        print("💡 Alle tabbladen zijn geopend en klaar voor verdere verwerking")
+        # print(f"\n🎯 Data scraping voltooid voor alle {len(plaatsnamen)} plaatsen!")
+        # print("💡 Alle tabbladen zijn geopend en klaar voor verdere verwerking")
         
     except FileNotFoundError:
         print("❌ examen_plaatsen.json bestand niet gevonden!")

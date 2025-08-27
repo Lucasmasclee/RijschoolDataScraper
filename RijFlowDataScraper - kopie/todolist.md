@@ -1,29 +1,22 @@
-# RijFlow Data Scraper - Todo List
+✅Microsoft edge openen met headless = false
+✅Cookies accepteren
+Voor elke plaatsnaam:
+    ✅https://www.cbr.nl/nl/rijschoolzoeker openen
+    ✅Typ de plaatsnaam in de zoekbalk
+    ✅Klik op Enter om te zoeken
+    ✅Klik op "auto" in voertuiglijst
+    ✅Klik op "alfabetisch" voor zoekopties
+    Voor elk zoekresultaat:
+        ✅Zoekresultaat klikken
+        ✅print de rijschoolnaam
+        ✅Rijschoolnaam opslaan
+        ✅Telefoonnummer opslaan
+        ✅Website opslaan
+        ✅Emailadres opslaan
+        ✅Alle gegevens opslaan in rijscholen_leads.csv`
 
-## ✅ Voltooide taken:
-- ✅ Browser openen en navigeren naar CBR rijschoolzoeker
-- ✅ Cookies accepteren
-- ✅ Plaatsnaam invoeren in zoekbalk
-- ✅ Auto knop vinden en klikken
-- ✅ Alfabetisch knop vinden en klikken
-- ✅ Alle zoekresultaten vinden
-- ✅ Elk zoekresultaat openen en weer sluiten
-- ✅print de rijschoolnaam
-
-## 🔄 Huidige taak:
-- 🔄 Contactgegevens extraheren van elk zoekresultaat
-  - ✅ Telefoonnummers extraheren
-  - ✅ Emailadressen extraheren  
-  - ✅ Websites extraheren
-  - ✅ Gegevens opslaan in JSON bestand
-
-## 📋 Volgende taken:
-- [ ] Gegevens valideren en opschonen
-- [ ] Duplicaten verwijderen
-- [ ] Gegevens exporteren naar CSV
-- [ ] Foutafhandeling verbeteren
-- [ ] Performance optimaliseren
-
-## 🎯 Doel:
-Een complete dataset maken van alle Nederlandse rijschoolgegevens met contactinformatie.
-
+3 glitches:
+- Random websites worden geopend
+    - Bovag.nl
+- Voor sommige plaatsen wordt de knop 'auto' niet gevonden
+- Resultaten worden niet goed ingeklapt, waardoor gegevens van rijscholen gemixt worden
