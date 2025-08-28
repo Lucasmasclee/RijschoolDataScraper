@@ -18,5 +18,9 @@ Voor elke plaatsnaam:
 3 glitches:
 - Random websites worden geopend
     - Bovag.nl
+    - rbkl.nl
+    - vrb.nu
 - Voor sommige plaatsen wordt de knop 'auto' niet gevonden
 - Resultaten worden niet goed ingeklapt, waardoor gegevens van rijscholen gemixt worden
+    - drive2relax
+    - verkeersschool stammers

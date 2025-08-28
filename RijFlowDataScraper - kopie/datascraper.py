@@ -576,7 +576,7 @@ def start_datascraper(driver):
                                                         
                                                         if clickable_button and clickable_button.is_enabled() and clickable_button.is_displayed():
                                                             # Haal de rijschoolnaam op voor logging
-                                                            rijschool_naam = clickable_button.text.strip()
+                                                            rijschool_naam = clickable_button.text.strip().replace("\"", "").replace(",", "")
                                                             if rijschool_naam in list_of_rijscholen:
                                                                 print(f"  ⚠️ Rijschool {rijschool_naam} al verwerkt, sluit tabblad...")
                                                                 continue
@@ -586,8 +586,22 @@ def start_datascraper(driver):
                                                             driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", clickable_button)
                                                             time.sleep(0.5)
                                                             
-                                                            # Klik op de knop
-                                                            clickable_button.click()
+                                                            # Klik op de linkerkant van de knop om advertenties te vermijden
+                                                            # Gebruik JavaScript om te klikken op de linkerkant van de knop
+                                                            driver.execute_script("""
+                                                                var rect = arguments[0].getBoundingClientRect();
+                                                                var x = rect.left + 10; // 10 pixels van de linkerkant
+                                                                var y = rect.top + rect.height / 2; // Midden van de hoogte
+                                                                
+                                                                var clickEvent = new MouseEvent('click', {
+                                                                    view: window,
+                                                                    bubbles: true,
+                                                                    cancelable: true,
+                                                                    clientX: x,
+                                                                    clientY: y
+                                                                });
+                                                                arguments[0].dispatchEvent(clickEvent);
+                                                            """, clickable_button)
                                                             # print(f"  ✅ Resultaat {i+1} succesvol geklikt!")
                                                             
                                                             # Wacht even zodat de details kunnen laden
@@ -642,7 +656,7 @@ def start_datascraper(driver):
                                                             plaats_rijscholen.append(contact_info)
                                                             
                                                             # Wacht even zodat alle content geladen is voordat we proberen te sluiten
-                                                            time.sleep(1)
+                                                            time.sleep(2)
                                                             
                                                             # Sluit de details weer (klik opnieuw op dezelfde knop)
                                                             try:
@@ -652,8 +666,21 @@ def start_datascraper(driver):
                                                                     driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", clickable_button)
                                                                     time.sleep(0.5)
                                                                     
-                                                                    # Klik op de knop om te sluiten
-                                                                    clickable_button.click()
+                                                                    # Klik op de linkerkant van de knop om advertenties te vermijden
+                                                                    driver.execute_script("""
+                                                                        var rect = arguments[0].getBoundingClientRect();
+                                                                        var x = rect.left + 10; // 10 pixels van de linkerkant
+                                                                        var y = rect.top + rect.height / 2; // Midden van de hoogte
+                                                                        
+                                                                        var clickEvent = new MouseEvent('click', {
+                                                                            view: window,
+                                                                            bubbles: true,
+                                                                            cancelable: true,
+                                                                            clientX: x,
+                                                                            clientY: y
+                                                                        });
+                                                                        arguments[0].dispatchEvent(clickEvent);
+                                                                    """, clickable_button)
                                                                     # print(f"  🔒 Details van resultaat {i+1} gesloten")
                                                                 else:
                                                                     print(f"  ⚠️ Knop niet meer klikbaar, probeer alternatieve methode...")
@@ -663,7 +690,21 @@ def start_datascraper(driver):
                                                                         if new_button.is_enabled() and new_button.is_displayed():
                                                                             driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", new_button)
                                                                             time.sleep(0.5)
-                                                                            new_button.click()
+                                                                            # Klik op de linkerkant van de knop om advertenties te vermijden
+                                                                            driver.execute_script("""
+                                                                                var rect = arguments[0].getBoundingClientRect();
+                                                                                var x = rect.left + 10; // 10 pixels van de linkerkant
+                                                                                var y = rect.top + rect.height / 2; // Midden van de hoogte
+                                                                                
+                                                                                var clickEvent = new MouseEvent('click', {
+                                                                                    view: window,
+                                                                                    bubbles: true,
+                                                                                    cancelable: true,
+                                                                                    clientX: x,
+                                                                                    clientY: y
+                                                                                });
+                                                                                arguments[0].dispatchEvent(clickEvent);
+                                                                            """, new_button)
                                                                             print(f"  🔒 Details van resultaat {i+1} gesloten (alternatieve methode)")
                                                                         else:
                                                                             print(f"  ⚠️ Alternatieve knop ook niet klikbaar")
