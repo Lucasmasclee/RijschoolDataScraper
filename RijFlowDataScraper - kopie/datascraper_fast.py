@@ -172,6 +172,7 @@ def extract_contact_info_fast(driver, rijschool_naam):
             website = website.replace("\"", "").replace(",", "")
 
             writer.writerow([new_rijschool_naam, telefoonnummer, emailadres, website])
+            list_of_rijscholen.append(new_rijschool_naam)
         
         return contact_info
         
@@ -199,7 +200,7 @@ def start_datascraper_fast(driver):
         plaatsnamen = data.get('plaatsnamen', [])
         print(f"📋 {len(plaatsnamen)} examenplaatsen gevonden")
         
-        for i, plaats in enumerate(plaatsnamen[22:]):
+        for i, plaats in enumerate(plaatsnamen[100:]):
             print(f"📍 Verwerk plaats {i+1}/{len(plaatsnamen)}: {plaats}")
             
             try:

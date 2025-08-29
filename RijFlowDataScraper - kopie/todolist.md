@@ -17,3 +17,6 @@ Voor elke plaatsnaam:
 
 1 glitch:
 - Voor sommige plaatsen wordt de knop 'auto' niet gevonden
+
+Rijscholen in Nederland: 8000/9000
+Rij-instructeurs in nederland: 15000
