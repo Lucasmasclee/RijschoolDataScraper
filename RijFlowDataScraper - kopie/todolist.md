@@ -13,14 +13,7 @@ Voor elke plaatsnaam:
         ✅Telefoonnummer opslaan
         ✅Website opslaan
         ✅Emailadres opslaan
-        ✅Alle gegevens opslaan in rijscholen_leads.csv`
+        ✅Alle gegevens opslaan in rijscholen_leads.csv
 
-3 glitches:
-- Random websites worden geopend
-    - Bovag.nl
-    - rbkl.nl
-    - vrb.nu
+1 glitch:
 - Voor sommige plaatsen wordt de knop 'auto' niet gevonden
-- Resultaten worden niet goed ingeklapt, waardoor gegevens van rijscholen gemixt worden
-    - drive2relax
-    - verkeersschool stammers

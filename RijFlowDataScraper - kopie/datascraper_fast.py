@@ -193,7 +193,7 @@ def start_datascraper_fast(driver):
     alle_rijscholen_data = []
     
     try:
-        with open('examen_plaatsen.json', 'r', encoding='utf-8') as file:
+        with open('nederlandse_plaatsnamen.json', 'r', encoding='utf-8') as file:
             data = json.load(file)
         
         plaatsnamen = data.get('plaatsnamen', [])
@@ -236,6 +236,7 @@ def start_datascraper_fast(driver):
                     # Typ de plaatsnaam in de zoekbalk
                     search_input.clear()
                     search_input.send_keys(plaats)
+                    time.sleep(0.5)
                     search_input.send_keys(Keys.ENTER)
                     
                     time.sleep(1)  # Verlaagd van 2 naar 1 seconde
@@ -249,7 +250,8 @@ def start_datascraper_fast(driver):
                             "a.vehicle",
                             "a[class*='vehicle']",
                             "a:has(.vehicle__name:contains('Auto'))",
-                            "a:has(.vehicle__name)"
+                            "a:has(.vehicle__name)",
+                            "a.vehicle"
                         ]
                         
                         auto_button = None
