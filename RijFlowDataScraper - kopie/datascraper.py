@@ -323,7 +323,7 @@ def start_datascraper(driver):
         # Voor elke plaats: open nieuw tabblad en zoek
         print("\n🔍 Start met data scraping voor elke plaats...")
         
-        for i, plaats in enumerate(plaatsnamen):
+        for i, plaats in enumerate(plaatsnamen[19:]):
             print(f"\n📍 Verwerk plaats {i+1}/{len(plaatsnamen)}: {plaats}")
             
             try:
