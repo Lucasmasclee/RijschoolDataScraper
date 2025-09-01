@@ -20,3 +20,14 @@ Voor elke plaatsnaam:
 
 Rijscholen in Nederland: 8000/9000
 Rij-instructeurs in nederland: 15000
+
+stappenplan voor geverifieerde emails:
+alle emails verzamelen met datascraper
+verifiëren via zerobounce.net -> Alle emails worden verdeeld in categoriën
+final_clean_leads.csv maken met:
+    clean_leads_abuse.csv (Deze mensen markeren emails vaak als spam)
+    catch_all.csv (niks mee aan de hand?)
+    clean_leads_donotmail (instantly keurt deze goed, maar zerobounce.net niet)
+    clean_leads_unknown (Nog uitzoeken!)
+    clean_leads_valid (valid emails)
+
