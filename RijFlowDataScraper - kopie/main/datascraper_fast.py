@@ -194,13 +194,13 @@ def start_datascraper_fast(driver):
     alle_rijscholen_data = []
     
     try:
-        with open('nederlandse_plaatsnamen.json', 'r', encoding='utf-8') as file:
+        with open('examen_plaatsen.json', 'r', encoding='utf-8') as file:
             data = json.load(file)
         
         plaatsnamen = data.get('plaatsnamen', [])
         print(f"📋 {len(plaatsnamen)} examenplaatsen gevonden")
         
-        for i, plaats in enumerate(plaatsnamen[100:]):
+        for i, plaats in enumerate(plaatsnamen[0:]):
             print(f"📍 Verwerk plaats {i+1}/{len(plaatsnamen)}: {plaats}")
             
             try:
