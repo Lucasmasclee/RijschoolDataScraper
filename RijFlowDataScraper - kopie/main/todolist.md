@@ -31,3 +31,10 @@ final_clean_leads.csv maken met:
     clean_leads_unknown (Nog uitzoeken!)
     clean_leads_valid (valid emails)
 
+Huidige emaillists:
+    Completed✅: Instantly Campaign: RijFlow App NL
+    Invalid: Instantly Campaign: RijFlow invalid Emails
+    Valid & Niet Completed: Instantly Campaign: RijFlow OFFICIAL
+
+    
+
