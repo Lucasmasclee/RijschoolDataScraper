@@ -34,7 +34,10 @@ final_clean_leads.csv maken met:
 Huidige emaillists:
     Completed✅: Instantly Campaign: RijFlow App NL
     Invalid: Instantly Campaign: RijFlow invalid Emails
-    Valid & Niet Completed: Instantly Campaign: RijFlow OFFICIAL
+    
+    Lijst met geverifieerde, valide emails: RijfFlow OFFICIAL
+    Lijst met geverifieerde, valide emails: new_final_clean_leads
+    invalide emails 3 sept: clean_leads_invalid.csv
 
     
 

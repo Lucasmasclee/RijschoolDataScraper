@@ -55,23 +55,22 @@ def main():
 
 
 
-            with open('instantly_verified_emails.csv', 'r') as file4:
+            with open('official_campaign.csv', 'r') as file4:
                 reader4 = csv.reader(file4)
                 for row in reader4:
                     email = row[1]
                     if email in list_1:
                         # print("invalid email: " + email)
                         count1 += 1
-                    elif email in list_2:
+                    if email in list_2:
                         count2 += 1
-                    elif email in list_3:
+                    if email in list_3:
                         count3 += 1
-                    elif email in list_4:
+                    if email in list_4:
                         count4 += 1
-                    elif email in list_5:
+                    if email in list_5:
                         count5 += 1
-                    else:
-                        # print("valid email: " + email)
+                    if email not in list_1 and email not in list_2 and email not in list_3 and email not in list_4 and email not in list_5: # valid emails
                         count6 += 1
                 
 
@@ -85,6 +84,7 @@ def main():
     print("count4: " + str(count4))
     print("count5: " + str(count5))
     print("count6: " + str(count6))
+    print("total count: " + str(count1 + count2 + count3 + count4 + count5 + count6))
     print("validemailcount2: " + str(validemailcount2))
     print("donotmailemailcount: " + str(donotmailemailcount))
 # run the script
